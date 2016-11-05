@@ -2,6 +2,10 @@
 
 @screen-md-max: 900px;
 @screen-sm-max: 500px;
+@cutoff: 700px;
+
+@titleFont: "Bangers", sans-serif;
+@bodyFont: "Roboto", sans-serif;
 
 html {
 	font-size: 17px;
@@ -14,9 +18,17 @@ html {
 }
 
 body {
-	background: url('/img/bg.png') desaturate(#369, 25%);
-	font-family: "Roboto", sans-serif;
+	background: url('/img/bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom center;
+	font-family: @bodyFont;
 	font-weight: 300;
+	color: #222;
+
+	@media (max-width: @screen-md-max) {
+		background-image: none;
+	}
 }
 
 // apply a natural box layout model to all elements, but allowing components to change
@@ -42,9 +54,9 @@ html {
 	.card {
 		flex: 0 1 900px;
 
-		background: #f9f9f9;
-		box-shadow: 0.25em 0.25em 1em 0 darken(desaturate(#ddd, 25%), 15%);
-		border: 1px solid #ddd;
+		background: fadeOut(#f9f9f9, 0%);
+		box-shadow: 0.25em 0.25em 1em 0 fadeOut(#555, 50%);
+		border: 1px solid #555;
 		border-bottom: none;
 
 		display: flex;
@@ -67,8 +79,6 @@ html {
 	.top {
 		display: flex;
 		align-items: center;
-
-		@cutoff: 600px;
 
 		@media (max-width: @cutoff) {
 			display: block;
@@ -154,7 +164,7 @@ html {
 			border-radius: 300px;
 		}
 
-		@media (max-width: 600px) {
+		@media (max-width: @cutoff) {
 			max-width: 200px;
 			padding: 0;
 			margin: 1em auto;
@@ -169,11 +179,14 @@ html {
 	.details {
 		flex: 0 0 60%;
 		color: #222;
-		padding: 1em 2em;
+		padding: 1em 2em 2em;
 
 		.name {
 			margin: 0;
-			font-size: 2.5em;
+			font-size: 4em;
+			line-height: 1.1;
+			font-family: @titleFont;
+			font-weight: 400;
 		}
 
 		.title {
@@ -181,15 +194,21 @@ html {
 			margin: 0;
 			color: #999;
 			font-size: 1.7em;
+			line-height: 1.1;
+			margin-bottom: 1.5em;
+			font-family: @bodyFont;
+			font-weight: 300;
 		}
 
-		@media (max-width: @screen-sm-max) {
+		@media (max-width: @cutoff) {
 			.name, .title {
 				text-align: center;
 			}
+		}
 
+		@media (max-width: @screen-sm-max) {
 			.name {
-				font-size: 2em;
+				font-size: 3em;
 			}
 
 			.title {
@@ -200,13 +219,6 @@ html {
 		.links {
 			.link {
 				.main-link();
-			}
-
-			@media (max-width: @screen-sm-max) {
-				.link {
-					display: block;
-					margin-bottom: 0.5em;
-				}
 			}
 		}
 	}
@@ -296,6 +308,6 @@ html {
 
 	@media (max-width: @screen-md-max) {
 		display: block;
-		margin-bottom: 0.5em;
+		margin-bottom: 1em;
 	}
 }
