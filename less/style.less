@@ -2,9 +2,9 @@
 
 @screen-md-max: 900px;
 @screen-sm-max: 500px;
-@cutoff: 700px;
+@cutoff: 750px;
 
-@titleFont: "Bangers", sans-serif;
+@titleFont: "Bungee", sans-serif;
 @bodyFont: "Roboto", sans-serif;
 
 html {
@@ -21,13 +21,14 @@ body {
 	background: url('/img/bg.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: bottom center;
+	background-position: top center;
 	font-family: @bodyFont;
 	font-weight: 300;
 	color: #222;
 
-	@media (max-width: @screen-md-max) {
+	@media (max-width: @cutoff) {
 		background-image: none;
+		background-position: center;
 	}
 }
 
@@ -47,12 +48,12 @@ html {
 	align-items: center;
 	min-height: 100vh;
 
-	@media (max-width: @screen-md-max) {
+	@media (max-width: @cutoff) {
 		display: block;
 	}
 
 	.card {
-		flex: 0 1 900px;
+		flex: 0 1 800px;
 
 		background: fadeOut(#f9f9f9, 0%);
 		box-shadow: 0.25em 0.25em 1em 0 fadeOut(#555, 50%);
@@ -64,7 +65,7 @@ html {
 		align-items: center;
 		overflow: hidden;
 
-		@media (max-width: @screen-md-max) {
+		@media (max-width: @cutoff) {
 			border: none;
 			min-height: 100vh;
 			position: relative;
@@ -95,7 +96,7 @@ html {
 			width: 100%;
 		}
 
-		@media (max-width: @screen-md-max) {
+		@media (max-width: @cutoff) {
 			position: absolute;
 			bottom: 0;
 
@@ -155,8 +156,8 @@ html {
 	}
 
 	.img {
-		flex: 0 1 40%;
-		padding: 3em 2em;
+		flex: 0 1 33.3333%;
+		padding: 2em 2em;
 		padding-right: 0;
 
 		img {
@@ -177,13 +178,14 @@ html {
 	}
 
 	.details {
-		flex: 0 0 60%;
+		flex: 0 0 66.6667%;
 		color: #222;
 		padding: 1em 2em 2em;
+		text-align: center;
 
 		.name {
 			margin: 0;
-			font-size: 4em;
+			font-size: 2.75em;
 			line-height: 1.1;
 			font-family: @titleFont;
 			font-weight: 400;
@@ -192,8 +194,8 @@ html {
 		.title {
 			font-weight: 300;
 			margin: 0;
-			color: #999;
-			font-size: 1.7em;
+			color: #aaa;
+			font-size: 1.5em;
 			line-height: 1.1;
 			margin-bottom: 1.5em;
 			font-family: @bodyFont;
@@ -217,7 +219,7 @@ html {
 		}
 
 		.links {
-			display: flex;
+			display: block;
 			margin-top: 2em;
 
 			@media (max-width: @screen-sm-max) {
@@ -256,7 +258,7 @@ html {
 		border-color: darken(@bg, 5%);
 	}
 
-	@media (max-width: @screen-md-max) {
+	@media (max-width: @cutoff) {
 		display: block;
 		float: left;
 		width: 33.33333%;
@@ -279,7 +281,6 @@ html {
 	@color: #369;
 	@text: #fff;
 
-	flex: 0 0 33.33333%;
 	display: block;
 	background: @color;
 	color: @text;
@@ -289,10 +290,13 @@ html {
 	vertical-align: middle;
 	line-height: 2.5;
 	text-decoration: none;
-	border-radius: 10px;
+	border-radius: 5px;
+	border: 1px solid darken(@color, 15%);
 	box-shadow: 0 0.25em 0 0 darken(@color, 10%);
 	transition: transform 0.2s, box-shadow 0.2s;
-	margin-right: 10px;
+	width: 66.6667%;
+	margin: 1em auto;
+	text-align: left;
 
 	img {
 		display: inline-block;
@@ -304,6 +308,7 @@ html {
 		display: inline-block;
 		width: 2.5em;
 		text-align: center;
+		margin-right: 0.5em;
 	}
 
 	&:hover {
@@ -316,8 +321,8 @@ html {
 		box-shadow: 0 0.05em 0 0 darken(@color, 10%);
 	}
 
-	@media (max-width: @screen-md-max) {
+	@media (max-width: @cutoff) {
 		display: block;
-		margin-bottom: 1em;
+		width: 100%;
 	}
 }
