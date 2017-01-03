@@ -11,26 +11,32 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.css$/,
-				loader: "style!css"
+				loader: "style-loader!css-loader"
 			},
 			{
 				test: /\.less$/,
-				loader: "style!css!less"
+				loader: "style-loader!css-loader!less-loader"
 			},
-			{ test: /\.svg(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url?limit=65000&mimetype=image/svg+xml&name=./fonts/[name].[ext]' },
-			{ test: /\.woff(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url?limit=65000&mimetype=application/font-woff&name=./fonts/[name].[ext]' },
-			{ test: /\.woff2(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url?limit=65000&mimetype=application/font-woff2&name=./fonts/[name].[ext]' },
-			{ test: /\.[ot]tf(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url?limit=65000&mimetype=application/octet-stream&name=./fonts/[name].[ext]' },
-			{ test: /\.eot(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url?limit=65000&mimetype=application/vnd.ms-fontobject&name=./fonts/[name].[ext]' },
+			{ test: /\.svg(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url-loader?limit=65000&mimetype=image/svg+xml&name=./fonts/[name].[ext]' },
+			{ test: /\.woff(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url-loader?limit=65000&mimetype=application/font-woff&name=./fonts/[name].[ext]' },
+			{ test: /\.woff2(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url-loader?limit=65000&mimetype=application/font-woff2&name=./fonts/[name].[ext]' },
+			{ test: /\.[ot]tf(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url-loader?limit=65000&mimetype=application/octet-stream&name=./fonts/[name].[ext]' },
+			{ test: /\.eot(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url-loader?limit=65000&mimetype=application/vnd.ms-fontobject&name=./fonts/[name].[ext]' },
 			{
 				test: /\.css$/,
-				loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+				loader: ExtractTextPlugin.extract({
+					fallbackLoader: "style-loader",
+					loader: "css-loader"
+				})
 			},
 			// Optionally extract less files
 			// or any other compile-to-css language
 			{
 				test: /\.less$/,
-				loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")
+				loader: ExtractTextPlugin.extract({
+					fallbackLoader: "style-loader",
+					loader: "css-loader!less-loader"
+				})
 			}
 		]
 	},
@@ -41,7 +47,8 @@ module.exports = {
 			}
 		}),
 
-		new ExtractTextPlugin("build/[name].css", {
+		new ExtractTextPlugin({
+			filename: "build/[name].css",
 			allChunks: true
 		}),
 	]

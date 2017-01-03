@@ -1,6 +1,6 @@
 @import (inline) "../node_modules/normalize.css/normalize.css";
 
-@screen-md-max: 900px;
+@screen-md-max: 1000px;
 @screen-sm-max: 500px;
 @cutoff: 750px;
 
@@ -18,7 +18,6 @@ html {
 }
 
 body {
-	background: url('/img/bg.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
@@ -53,13 +52,7 @@ html {
 	}
 
 	.card {
-		flex: 0 1 800px;
-
-		background: fadeOut(#f9f9f9, 0%);
-		box-shadow: 0.25em 0.25em 1em 0 fadeOut(#555, 50%);
-		border: 1px solid #555;
-		border-bottom: none;
-
+		flex: 0 1 900px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -80,9 +73,11 @@ html {
 	.top {
 		display: flex;
 		align-items: center;
+		min-height: 400px;
 
 		@media (max-width: @cutoff) {
 			display: block;
+			min-height: auto;
 		}
 	}
 
@@ -156,7 +151,7 @@ html {
 	}
 
 	.img {
-		flex: 0 1 33.3333%;
+		flex: 0 1 40%;
 		padding: 2em 2em;
 		padding-right: 0;
 
@@ -178,7 +173,7 @@ html {
 	}
 
 	.details {
-		flex: 0 0 66.6667%;
+		flex: 0 0 60%;
 		color: #222;
 		padding: 1em 2em 2em;
 		text-align: center;
@@ -238,15 +233,17 @@ html {
 	display: inline-block;
 	white-space: nowrap;
 	text-align: center;
-	color: #444;
-	background: #f1f1f1;
-	border: 1px solid #ddd;
-	border-bottom-color: #555;
-	border-width: 1px 0px;
+	color: #565656;
+	border: 1px solid #555;
+	border-width: 1px 0px 0px 1px;
 	font-size: 0.9em;
 	padding: 1em 1.25em 1em 0;
 	text-decoration: none;
 	transition: background-color 0.35s, color 0.35s, border-color 0.25s;
+
+	&:first-child {
+		border-left-width: 0;
+	}
 
 	.fa {
 		width: 1.5em;
@@ -254,9 +251,7 @@ html {
 	}
 
 	&:hover {
-		background-color: @bg;
-		color: @text;
-		border-color: darken(@bg, 5%);
+		color: @bg;
 	}
 
 	@media (max-width: @cutoff) {
@@ -279,12 +274,9 @@ html {
 }
 
 .main-link() {
-	@color: #369;
-	@text: #fff;
-
 	display: block;
-	background: @color;
-	color: @text;
+	background: #565656;
+	color: #fff;
 	font-size: 0.9em;
 	padding: 0 0.75em;
 	white-space: nowrap;
@@ -292,12 +284,10 @@ html {
 	line-height: 2.5;
 	text-decoration: none;
 	border-radius: 5px;
-	border: 1px solid darken(@color, 15%);
-	box-shadow: 0 0.25em 0 0 darken(@color, 10%);
-	transition: transform 0.2s, box-shadow 0.2s;
-	width: 66.6667%;
-	margin: 1em auto;
+	width: 80%;
 	text-align: left;
+	margin: 0.75em auto;
+	transition: background 0.3s;
 
 	img {
 		display: inline-block;
@@ -312,18 +302,27 @@ html {
 		margin-right: 0.5em;
 	}
 
-	&:hover {
-		transform: translateY(-0.1em);
-		box-shadow: 0 0.35em 0 0 darken(@color, 15%);
-	}
-
-	&:active, &:focus {
-		transform: translateY(0.2em);
-		box-shadow: 0 0.05em 0 0 darken(@color, 10%);
-	}
-
 	@media (max-width: @cutoff) {
 		display: block;
+		font-size: 1.1em;
 		width: 100%;
+	}
+
+	&.email {
+		&:hover {
+			background: #333;
+		}
+	}
+
+	&.section411 {
+		&:hover {
+			background: #1e5f4b;
+		}
+	}
+
+	&.resume {
+		&:hover {
+			background: #369;
+		}
 	}
 }

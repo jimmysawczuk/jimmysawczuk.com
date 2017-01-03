@@ -1,2 +1,2 @@
-require("font-awesome-webpack");
+require("font-awesome-webpack2");
 require("./less/style.less");
