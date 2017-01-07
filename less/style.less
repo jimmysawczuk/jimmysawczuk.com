@@ -180,7 +180,7 @@ html {
 
 		.name {
 			margin: 0;
-			font-size: 2.75em;
+			font-size: 3em;
 			line-height: 1.1;
 			font-family: @titleFont;
 			font-weight: 400;
@@ -195,6 +195,10 @@ html {
 			margin-bottom: 1.5em;
 			font-family: @bodyFont;
 			font-weight: 300;
+
+			span {
+				white-space: nowrap;
+			}
 		}
 
 		@media (max-width: @cutoff) {
@@ -251,7 +255,8 @@ html {
 	}
 
 	&:hover {
-		color: @bg;
+		background: @bg;
+		color: #fff;
 	}
 
 	@media (max-width: @cutoff) {
@@ -275,7 +280,7 @@ html {
 
 .main-link() {
 	display: block;
-	background: #565656;
+	background: #333;
 	color: #fff;
 	font-size: 0.9em;
 	padding: 0.5em 0.75em;
@@ -310,7 +315,7 @@ html {
 
 	&.email {
 		&:hover {
-			background: #333;
+			background: #b00;
 		}
 	}
 
