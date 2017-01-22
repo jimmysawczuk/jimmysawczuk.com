@@ -10,3 +10,5 @@ You'll need node/npm, webpack v2 and yarn. After cloning:
 $ yarn
 $ webpack -p
 ```
+
+[1]: https://jimmysawczuk.com
