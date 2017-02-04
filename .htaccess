@@ -30,6 +30,8 @@ Redirect 301 /2010/06/the-best-ballpark-in-america.html https://section411.com/2
 Redirect 301 /2009/05/the-park-that-started-it-all.html https://section411.com/2009/05/the-park-that-started-it-all/
 Redirect 301 /2008/07/the-stadiums-in-new-york.html https://section411.com/ballparks/
 Redirect 301 /2008/05/here-i-dreamt-i-was-an-architect.html https://section411.com/ballparks/
+Redirect 301 /ballparks/ https://section411.com/ballparks/
+Redirect 301 /ballparks https://section411.com/ballparks/
 
 # Apache Server Configs v2.14.0 | MIT License
 # https://github.com/h5bp/server-configs-apache
