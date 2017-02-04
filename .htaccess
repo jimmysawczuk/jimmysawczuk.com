@@ -1,3 +1,36 @@
+Redirect 301 /2016/05/where-dreams-are-made.html https://section411.com/2016/05/where-dreams-are-made/
+Redirect 301 /2016/05/indoor-baseball.html https://section411.com/2016/05/indoor-baseball/
+Redirect 301 /2016/04/lets-glow.html https://section411.com/2016/04/lets-glow/
+Redirect 301 /2016/04/baseball-across-the-bay.html https://section411.com/2016/04/baseball-across-the-bay/
+Redirect 301 /2016/03/wait-till-this-year.html https://section411.com/2016/03/wait-till-this-year/
+Redirect 301 /2015/12/to-the-moon.html https://section411.com/2015/12/to-the-moon/
+Redirect 301 /2015/11/you-are-my-witnesses.html https://section411.com/2015/11/you-are-my-witnesses/
+Redirect 301 /2015/10/one-step-ahead.html https://section411.com/2015/10/one-step-ahead/
+Redirect 301 /2015/10/once-more-into-the-cold.html https://section411.com/2015/10/once-more-into-the-cold/
+Redirect 301 /2015/09/progressive-field-renovated.html https://section411.com/2015/09/progressive-field-renovated/
+Redirect 301 /2015/07/mile-high-baseball.html https://section411.com/2015/07/mile-high-baseball/
+Redirect 301 /2015/03/once-more-with-feeling.html https://section411.com/2015/03/once-more-with-feeling/
+Redirect 301 /2015/02/ten-days-in-bhutan.html https://section411.com/2015/02/ten-days-in-bhutan/
+Redirect 301 /2015/01/if-it-bleeds-it-leads.html https://section411.com/2015/01/if-it-bleeds-it-leads/
+Redirect 301 /2014/11/a-life-fully-lived.html https://section411.com/2014/11/a-life-fully-lived/
+Redirect 301 /2014/08/the-mecca-of-cheesesteaks.html https://section411.com/2014/08/the-mecca-of-cheesesteaks/
+Redirect 301 /2014/03/we.html https://section411.com/2014/03/we/
+Redirect 301 /2013/12/beautiful-dont-you-think.html https://section411.com/2013/12/beautiful-dont-you-think/
+Redirect 301 /2013/08/wait-theres-a-waffle-house-here.html https://section411.com/2013/08/wait-theres-a-waffle-house-here/
+Redirect 301 /2013/07/a-problem-of-scope.html https://section411.com/2013/07/a-problem-of-scope/
+Redirect 301 /2013/04/like-a-carpenter-who-makes-stairs.html https://section411.com/2013/04/like-a-carpenter-who-makes-stairs/
+Redirect 301 /2013/01/the-great-emancipator.html https://section411.com/2013/01/the-great-emancipator/
+Redirect 301 /2012/05/two-outs-away.html https://section411.com/2012/05/two-outs-away/
+Redirect 301 /2012/05/northern-exposure.html https://section411.com/2012/05/northern-exposure/
+Redirect 301 /2012/05/in-defense-of-chris-perez.html https://section411.com/2012/05/in-defense-of-chris-perez/
+Redirect 301 /2012/02/living-the-dream.html https://section411.com/2012/02/living-the-dream/
+Redirect 301 /2011/09/baseball-in-the-twin-cities.html https://section411.com/2011/09/baseball-in-the-twin-cities/
+Redirect 301 /2011/07/oer-the-land-of-the-free.html https://section411.com/2011/07/oer-the-land-of-the-free/
+Redirect 301 /2010/06/the-best-ballpark-in-america.html https://section411.com/2010/06/the-best-ballpark-in-america/
+Redirect 301 /2009/05/the-park-that-started-it-all.html https://section411.com/2009/05/the-park-that-started-it-all/
+Redirect 301 /2008/07/the-stadiums-in-new-york.html https://section411.com/ballparks/
+Redirect 301 /2008/05/here-i-dreamt-i-was-an-architect.html https://section411.com/ballparks/
+
 # Apache Server Configs v2.14.0 | MIT License
 # https://github.com/h5bp/server-configs-apache
 
@@ -85,7 +118,7 @@
 # Customize what Apache returns to the client in case of an error.
 # https://httpd.apache.org/docs/current/mod/core.html#errordocument
 
-# ErrorDocument 404 /404.html
+ErrorDocument 404 /404.php
 
 # ----------------------------------------------------------------------
 # | Error prevention                                                   |
