@@ -32,6 +32,8 @@ Redirect 301 /2008/07/the-stadiums-in-new-york.html https://section411.com/ballp
 Redirect 301 /2008/05/here-i-dreamt-i-was-an-architect.html https://section411.com/ballparks/
 Redirect 301 /ballparks/ https://section411.com/ballparks/
 Redirect 301 /ballparks https://section411.com/ballparks/
+Redirect 301 /projects/ https://github.com/jimmysawczuk
+Redirect 301 /projects https://github.com/jimmysawczuk
 
 # Apache Server Configs v2.14.0 | MIT License
 # https://github.com/h5bp/server-configs-apache
