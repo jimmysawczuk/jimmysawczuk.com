@@ -1,2 +1,1 @@
-require("font-awesome-webpack2");
-require("./less/style.less");
+import "./less/style.less";

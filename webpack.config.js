@@ -11,33 +11,38 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.css$/,
-				loader: "style-loader!css-loader"
+				use: ExtractTextPlugin.extract({
+					use: ['css-loader'],
+					fallback: ['style-loader'],
+				})
 			},
 			{
 				test: /\.less$/,
-				loader: "style-loader!css-loader!less-loader"
-			},
-			{ test: /\.svg(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url-loader?limit=65000&mimetype=image/svg+xml&name=./fonts/[name].[ext]' },
-			{ test: /\.woff(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url-loader?limit=65000&mimetype=application/font-woff&name=./fonts/[name].[ext]' },
-			{ test: /\.woff2(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url-loader?limit=65000&mimetype=application/font-woff2&name=./fonts/[name].[ext]' },
-			{ test: /\.[ot]tf(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url-loader?limit=65000&mimetype=application/octet-stream&name=./fonts/[name].[ext]' },
-			{ test: /\.eot(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url-loader?limit=65000&mimetype=application/vnd.ms-fontobject&name=./fonts/[name].[ext]' },
-			{
-				test: /\.css$/,
-				loader: ExtractTextPlugin.extract({
-					fallbackLoader: "style-loader",
-					loader: "css-loader"
+				use: ExtractTextPlugin.extract({
+					use: ['css-loader', 'less-loader'],
+					fallback: ['style-loader']
 				})
 			},
-			// Optionally extract less files
-			// or any other compile-to-css language
 			{
-				test: /\.less$/,
-				loader: ExtractTextPlugin.extract({
-					fallbackLoader: "style-loader",
-					loader: "css-loader!less-loader"
-				})
-			}
+				test: /\.svg(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+				loader: 'url-loader?limit=65000&mimetype=image/svg+xml&name=./fonts/[name].[ext]'
+			},
+			{
+				test: /\.woff(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+				loader: 'url-loader?limit=65000&mimetype=application/font-woff&name=./fonts/[name].[ext]'
+			},
+			{
+				test: /\.woff2(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+				loader: 'url-loader?limit=65000&mimetype=application/font-woff2&name=./fonts/[name].[ext]'
+			},
+			{
+				test: /\.[ot]tf(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+				loader: 'url-loader?limit=65000&mimetype=application/octet-stream&name=./fonts/[name].[ext]'
+			},
+			{
+				test: /\.eot(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+				loader: 'url-loader?limit=65000&mimetype=application/vnd.ms-fontobject&name=./fonts/[name].[ext]'
+			},
 		]
 	},
 	plugins: [
@@ -49,7 +54,7 @@ module.exports = {
 
 		new ExtractTextPlugin({
 			filename: "build/[name].css",
-			allChunks: true
+			allChunks: true,
 		}),
 	]
 };
