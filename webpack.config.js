@@ -1,60 +1,46 @@
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require("webpack");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
-	entry: "./entry.js",
-	output: {
-		path: __dirname,
-		filename: './build/bundle.js'
-	},
-	module: {
-		loaders: [
-			{
-				test: /\.css$/,
-				use: ExtractTextPlugin.extract({
-					use: ['css-loader'],
-					fallback: ['style-loader'],
-				})
-			},
-			{
-				test: /\.less$/,
-				use: ExtractTextPlugin.extract({
-					use: ['css-loader', 'less-loader'],
-					fallback: ['style-loader']
-				})
-			},
-			{
-				test: /\.svg(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-				loader: 'url-loader?limit=65000&mimetype=image/svg+xml&name=./fonts/[name].[ext]'
-			},
-			{
-				test: /\.woff(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-				loader: 'url-loader?limit=65000&mimetype=application/font-woff&name=./fonts/[name].[ext]'
-			},
-			{
-				test: /\.woff2(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-				loader: 'url-loader?limit=65000&mimetype=application/font-woff2&name=./fonts/[name].[ext]'
-			},
-			{
-				test: /\.[ot]tf(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-				loader: 'url-loader?limit=65000&mimetype=application/octet-stream&name=./fonts/[name].[ext]'
-			},
-			{
-				test: /\.eot(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-				loader: 'url-loader?limit=65000&mimetype=application/vnd.ms-fontobject&name=./fonts/[name].[ext]'
-			},
-		]
-	},
-	plugins: [
-		new webpack.optimize.UglifyJsPlugin({
-			compress: {
-				warnings: false
-			}
-		}),
-
-		new ExtractTextPlugin({
-			filename: "build/[name].css",
-			allChunks: true,
-		}),
-	]
+    entry: {
+        main: "./src/main.js",
+        resume: "./src/resume.js"
+    },
+    output: {
+        path: __dirname,
+        filename: "./build/[name].js"
+    },
+    module: {
+        loaders: [
+            {
+                test: /\.js$/,
+                exclude: /(node_modules)/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ["env"]
+                    }
+                }
+            },
+            {
+                test: /\.json$/,
+                loader: "raw-loader"
+            },
+            {
+                test: /\.less$/,
+                use: ExtractTextPlugin.extract({
+                    use: ["css-loader", "less-loader"],
+                    fallback: ["style-loader"]
+                })
+            }
+        ]
+    },
+    plugins: [
+        new UglifyJSPlugin(),
+        new ExtractTextPlugin({
+            filename: "build/[name].css",
+            allChunks: true
+        })
+    ]
 };
