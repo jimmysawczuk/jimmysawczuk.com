@@ -23,6 +23,7 @@ body {
 #content {
 	margin: 0px;
 	background: #fff;
+	width: 900px;
 
 	.container {
 		padding: 0px;
@@ -47,19 +48,27 @@ body {
 	display: none;
 }
 
-#print_footer {
+#print-footer {
 	display: block;
-	margin-top: 3em;
+	margin: 3em auto 0;
+	width: 900px;
 	position: relative;
-	width: 100%;
+	text-align: center;
 
 	page-break-before: avoid;
 	.clearfix;
 
 	.container {
 		padding: 0px;
-
-		text-align: left;
+		text-align: center;
 		color: #999;
+	}
+
+	a {
+		@color: @linkColor;
+		color: @color;
+		&:active { color: @color; }
+		&:visited { color: @color; }
+		&:hover { text-decoration: none; color: @color; }
 	}
 }

@@ -1,3 +1,6 @@
 /node_modules/*
 /build/*
+/build.zip
 /REVISION.json
+/index.html
+/resume/index.html

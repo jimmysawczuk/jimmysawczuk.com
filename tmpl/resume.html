@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>James J. Sawczuk - Software Engineer</title>
 
-	<link href="/build/resume.css" rel="stylesheet" type="text/css" />
+	<link href="{{ asset "/build/resume.css" }}" rel="stylesheet" type="text/css" />
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
 	<meta name="keywords" content="jimmy, sawczuk, james, resume, php, html, css, mysql, mongodb, developer, software, engineer, go, programmer" />
@@ -227,9 +227,9 @@
 
 			<div class="block">
 				<h3>References</h3>
-				<div class="normal_list">
+				<p>
 					Available upon request: <a href="mailto:me@jimmysawczuk.com">me@jimmysawczuk.com</a>
-				</div>
+				</p>
 			</div>
 		</div>
 	</div>
@@ -242,7 +242,7 @@
 		<span class="line" id="revision-date"></span>
 	</div>
 
-	<div id="print_footer">
+	<div id="print-footer">
 		<div class="container">
 			&copy; <span class="date" data-format="YYYY"></span> Jimmy Sawczuk &middot;
 			<span class="revision"></span> &middot;
@@ -250,6 +250,6 @@
 		</div>
 	</div>
 
-	<script src="/build/resume.js"></script>
+	<script src="{{ asset "/build/resume.js" }}" async></script>
 </body>
 </html>

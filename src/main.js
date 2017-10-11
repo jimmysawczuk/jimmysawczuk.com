@@ -1,1 +1,1 @@
-import "../less/main.less";
+import "../less/main.less"
