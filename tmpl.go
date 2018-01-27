@@ -58,7 +58,15 @@ func main() {
 		}
 
 		tmpl := template.New("output").Funcs(map[string]interface{}{
-			"asset": loadAsset(o.Date, o.Env),
+			"asset":   loadAsset(o.Date, o.Env),
+			"getJSON": getJSON,
+			"now":     func() time.Time { return o.Date },
+			"parseTime": func(s string) (time.Time, error) {
+				return time.Parse(time.RFC3339, s)
+			},
+			"formatTime": func(f string, t time.Time) string {
+				return t.Format(f)
+			},
 		})
 
 		tmpl, err = tmpl.Parse(string(tmplStr))
@@ -85,4 +93,19 @@ func loadAsset(now time.Time, mode string) func(path string) string {
 
 		return path
 	}
+}
+
+func getJSON(path string) (interface{}, error) {
+	by, err := ioutil.ReadFile(path)
+	if err != nil {
+		return nil, err
+	}
+
+	var target interface{}
+	err = json.Unmarshal(by, &target)
+	if err != nil {
+		return nil, err
+	}
+
+	return target, nil
 }

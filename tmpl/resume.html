@@ -236,18 +236,25 @@
 	</div>
 
 	<div id="footer">
-		<span class="line">&copy; <span class="date" data-format="YYYY"></span> Jimmy Sawczuk</span>
+		{{ $rev := getJSON "REVISION.json" }}
+		<span class="line">&copy; {{ now | formatTime "2006" }} Jimmy Sawczuk</span>
 		<span class="dot">&middot;</span>
-		<span class="line revision"></span>
+		<span class="line revision">
+			<a href="https://github.com/jimmysawczuk/jimmysawczuk.com/commit/{{ index $rev "hex" "full" }}">rev. {{ index $rev "hex" "short" }}</a>
+		</span>
 		<span class="dot">&middot;</span>
-		<span class="line" id="revision-date"></span>
+		<span class="line" id="revision-date">Last modified on {{ index $rev "commit_date" "iso8601" | parseTime | formatTime "January 2, 2006" }}</span>
 	</div>
 
 	<div id="print-footer">
 		<div class="container">
-			&copy; <span class="date" data-format="YYYY"></span> Jimmy Sawczuk &middot;
-			<span class="revision"></span> &middot;
-			Printed on <span class="date" data-format="MMMM D, YYYY"></span>
+			&copy; {{ now | formatTime "2006" }} Jimmy Sawczuk
+			&middot;
+			<span class="revision">
+				<a href="https://github.com/jimmysawczuk/jimmysawczuk.com/commit/{{ index $rev "hex" "full" }}">rev. {{ index $rev "hex" "short" }}</a>
+			</span>
+			&middot;
+			Printed on <span id="print-date"></span>
 		</div>
 	</div>
 

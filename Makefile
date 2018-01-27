@@ -1,5 +1,7 @@
 default:
 	scm-status -out=REVISION.json
+	go run tmpl.go tmpl/index.html > index.html
+	go run tmpl.go tmpl/resume.html > resume/index.html
 	webpack -p
 
 dev: clean
