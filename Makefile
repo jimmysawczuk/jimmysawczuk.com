@@ -20,9 +20,7 @@ production: clean
 	MODE=production tmpl tmpl/index.tmpl > build/index.html
 	MODE=production tmpl tmpl/resume.tmpl > build/resume/index.html
 	webpack -p --output-path=build
-	cp -R img .htaccess *.png *.xml *.ico REVISION.json build/
-	zip -q -r build.zip build
-	scp build.zip jsawczuk@durin:~/jimmysawczuk.com
-	ssh jsawczuk@durin 'cd ~/jimmysawczuk.com && mkdir -p build && unzip -q -d . build.zip && rm build.zip && rm -rf last && mv public last && mv build public'
+	cp -R img *.png *.xml *.ico REVISION.json build/
+	AWS_PROFILE=jsawczuk aws s3 sync --acl=public-read build s3://jimmysawczuk.com
 
 .PHONY: clean
