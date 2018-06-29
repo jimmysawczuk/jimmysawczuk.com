@@ -1,7 +1,8 @@
-default:
+default: clean
+	mkdir -p resume
 	scm-status -out=REVISION.json
-	go run tmpl.go tmpl/index.html > index.html
-	go run tmpl.go tmpl/resume.html > resume/index.html
+	MODE=dev tmpl tmpl/index.tmpl > index.html
+	MODE=dev tmpl tmpl/resume.tmpl > resume/index.html
 	webpack -p
 
 dev: clean
