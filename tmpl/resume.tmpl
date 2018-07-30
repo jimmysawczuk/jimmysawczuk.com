@@ -243,7 +243,7 @@
 			<a href="https://github.com/jimmysawczuk/jimmysawczuk.com/commit/{{ index $rev "hex" "full" }}">rev. {{ index $rev "hex" "short" }}</a>
 		</span>
 		<span class="dot">&middot;</span>
-		<span class="line" id="revision-date">Last modified on {{ index $rev "commit_date" "iso8601" | parseTime | formatTime "January 2, 2006" }}</span>
+		<span class="line" id="revision-date">Last modified on {{ index $rev "date" | parseTime | formatTime "January 2, 2006" }}</span>
 	</div>
 
 	<div id="print-footer">
