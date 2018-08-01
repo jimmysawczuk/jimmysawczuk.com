@@ -1,14 +1,16 @@
 # jimmysawczuk.com
 
-[jimmysawczuk.com][1] is a simple HTML/CSS portfolio site that uses Webpack to package assets. 
+[jimmysawczuk.com][1] is a simple HTML/CSS portfolio site that uses [Parcel](http://parceljs.org) to package assets.
 
-## Usage
+## Dependencies
 
-You'll need node/npm, webpack v2 and yarn. After cloning:
+- Node/npm
+- Yarn
+- Parcel
+- [scm-status](http://github.com/jimmysawczuk/scm-status)
+- [tmpl](http://github.com/jimmysawczuk/tmpl)
 
-```bash
-$ yarn
-$ webpack -p
-```
+
+
 
 [1]: https://jimmysawczuk.com
