@@ -12,10 +12,9 @@ clean:
 	rm -rf build
 
 production: clean
-	mkdir -p build/resume build/dist
 	scm-status -out=REVISION.json
-	MODE=production tmpl tmpl/index.tmpl > build/index.html
-	MODE=production tmpl tmpl/resume.tmpl > build/resume/index.html
+	MODE=production tmpl -o build/index.html tmpl/index.tmpl
+	MODE=production tmpl -o build/resume/index.html tmpl/resume.tmpl
 	parcel build -d build/dist src/*.js
 	cp -R img *.png *.xml *.ico REVISION.json build/
 	AWS_PROFILE=jsawczuk aws s3 sync --acl=public-read --delete build s3://jimmysawczuk.com
