@@ -1,3 +1,6 @@
+include .env
+export $(shell sed 's/=.*//' .env)
+
 default: dev
 
 dev: clean
@@ -12,10 +15,10 @@ clean:
 
 production: clean
 	scm-status -out=REVISION.json
-	MODE=production tmpl -o build/index.html tmpl/index.tmpl
-	MODE=production tmpl -o build/resume/index.html tmpl/resume.tmpl
+	MODE=production tmpl -o build/index.html -timestamp-assets=false tmpl/index.tmpl
+	MODE=production tmpl -o build/resume/index.html -timestamp-assets=false tmpl/resume.tmpl
 	parcel build -d build/dist src/*.js
 	cp -R img *.png *.xml *.ico REVISION.json build/
-	AWS_PROFILE=jsawczuk aws s3 sync --acl=public-read --delete build s3://jimmysawczuk.com
+	netlify deploy -s ${NETLIFY_SITE_ID} -p -d build
 
 .PHONY: clean dev
