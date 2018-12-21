@@ -18,7 +18,7 @@ production: clean
 	MODE=production tmpl -o build/index.html -timestamp-assets=false tmpl/index.tmpl
 	MODE=production tmpl -o build/resume/index.html -timestamp-assets=false tmpl/resume.tmpl
 	parcel build -d build/dist src/*.js
-	cp -R img *.png *.xml *.ico REVISION.json build/
+	cp -R img *.png *.xml *.ico REVISION.json _redirects build/
 	netlify deploy -s ${NETLIFY_SITE_ID} -p -d build
 
 .PHONY: clean dev
