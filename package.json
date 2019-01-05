@@ -3,14 +3,15 @@
   "version": "2.0.0",
   "author": "Jimmy Sawczuk <me@jimmysawczuk.com>",
   "license": "MIT",
-  "dependencies": {
-    "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.0",
-    "css-loader": "^0.28.7",
-    "less": "^2.7.1",
-    "normalize.css": "^7.0.0",
-    "parcel-bundler": "^1.7.0",
-    "sizzle": "^2.3.3"
+  "dependencies": {},
+  "scripts": {
+    "build": "parcel build -d build/dist src/*.js"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "less": "^3.9.0",
+    "normalize.css": "^7.0.0",
+    "parcel-bundler": "^1.11",
+    "sizzle": "^2.3.3"
+  }
 }
