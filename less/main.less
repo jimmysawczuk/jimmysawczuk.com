@@ -1,5 +1,4 @@
 @import (inline) "../node_modules/normalize.css/normalize.css";
-@import (css) "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css";
 
 @screen-md-max: 1000px;
 @screen-sm-max: 500px;
@@ -271,7 +270,7 @@ html {
 		border-left-width: 0;
 	}
 
-	.fa {
+	.fa, .svg-inline--fa {
 		width: 1.5em;
 		text-align: center;
 	}
@@ -304,7 +303,7 @@ html {
 	display: block;
 	background: #333;
 	color: #fff;
-	font-size: 0.9em;
+	font-size: 1em;
 	padding: 0.5em 0.75em;
 	white-space: nowrap;
 	vertical-align: middle;
@@ -319,19 +318,19 @@ html {
 	img {
 		display: inline-block;
 		vertical-align: middle;
-		height: 1.3em;
+		height: 1.1em;
 	}
 
-	.logo-img, .fa {
+	.logo-img, .fa, .svg-inline--fa {
 		display: inline-block;
 		width: 2.5em;
 		text-align: center;
 		margin-right: 0.5em;
+		font-size: 1.1em;
 	}
 
 	@media (max-width: @cutoff) {
 		display: block;
-		font-size: 1.1em;
 		width: 100%;
 	}
 
