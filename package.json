@@ -3,15 +3,17 @@
   "version": "2.0.0",
   "author": "Jimmy Sawczuk <me@jimmysawczuk.com>",
   "license": "MIT",
-  "dependencies": {},
   "scripts": {
-    "build": "parcel build -d build/dist src/*.js"
+    "build": "parcel build --experimental-scope-hoisting -d build/dist src/*.js"
   },
   "private": true,
   "devDependencies": {
+    "@fortawesome/fontawesome-pro": "^5.7.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-brands-svg-icons": "^5.7.2",
+    "@fortawesome/pro-light-svg-icons": "^5.7.2",
     "less": "^3.9.0",
     "normalize.css": "^7.0.0",
-    "parcel-bundler": "^1.11",
-    "sizzle": "^2.3.3"
+    "parcel-bundler": "^1.11"
   }
 }

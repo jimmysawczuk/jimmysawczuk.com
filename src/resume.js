@@ -1,5 +1,6 @@
 import "../less/resume.less"
-;(function() {
+
+function setPrintDate(el) {
 	var d = new Date()
 	var months = {
 		0: "Jan",
@@ -22,5 +23,7 @@ import "../less/resume.less"
 		months[d.getUTCMonth()] +
 		" " +
 		d.getUTCFullYear()
-	document.getElementById("print-date").innerHTML = fmted
-})()
+	el.innerHTML = fmted
+}
+
+setPrintDate(document.getElementById("print-date"))

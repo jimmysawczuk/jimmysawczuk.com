@@ -7,7 +7,7 @@ dev: clean
 	scm-status -out=REVISION.json
 	MODE=dev tmpl -o build/index.html tmpl/index.tmpl
 	MODE=dev tmpl -o build/resume/index.html tmpl/resume.tmpl
-	parcel build -d build/dist src/*.js
+	npm run build
 	cp -R img *.png *.xml *.ico REVISION.json build/
 
 clean:
