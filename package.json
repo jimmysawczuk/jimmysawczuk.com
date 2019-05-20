@@ -12,6 +12,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2",
     "@fortawesome/free-brands-svg-icons": "^5.8",
     "@fortawesome/pro-light-svg-icons": "^5.8",
+    "autoprefixer": "^9.5.1",
     "less": "^3.9.0",
     "normalize.css": "^8.0",
     "parcel-bundler": "^1.12"
