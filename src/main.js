@@ -7,8 +7,8 @@ import {
 	faTwitter,
 	faInstagram,
 	faLinkedinIn,
-	faGooglePlusG,
 	faGithub,
+	faTelegram,
 } from "@fortawesome/free-brands-svg-icons"
 
 library.add(faEnvelopeOpen, faIdCard)
@@ -17,7 +17,7 @@ library.add(
 	faTwitter,
 	faInstagram,
 	faLinkedinIn,
-	faGooglePlusG,
 	faGithub,
+	faTelegram,
 )
 dom.i2svg()

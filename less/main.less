@@ -4,7 +4,8 @@
 @screen-sm-max: 500px;
 @cutoff: 750px;
 
-@bodyFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+@bodyFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
+	Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 @titleFont: Quicksand, @bodyFont;
 
 html {
@@ -124,6 +125,12 @@ html {
 				.bottom-link();
 			}
 
+			&.tg {
+				@bg: #0088cc;
+				@text: #fff;
+				.bottom-link();
+			}
+
 			&.instagram {
 				@bg: #d047d1;
 				@text: #fff;
@@ -134,13 +141,6 @@ html {
 				@bg: #0077b5;
 				@text: #fff;
 				.bottom-link();
-			}
-
-			&.googleplus {
-				@bg: #dd4b39;
-				@text: #fff;
-				.bottom-link();
-
 			}
 
 			&.github {
@@ -204,7 +204,7 @@ html {
 				white-space: nowrap;
 
 				&:after {
-					content:"·";
+					content: "·";
 					margin: 0 0.25em;
 				}
 
@@ -215,7 +215,8 @@ html {
 		}
 
 		@media (max-width: @cutoff) {
-			.name, .title {
+			.name,
+			.title {
 				text-align: center;
 			}
 		}
@@ -270,7 +271,8 @@ html {
 		border-left-width: 0;
 	}
 
-	.fa, .svg-inline--fa {
+	.fa,
+	.svg-inline--fa {
 		width: 1.5em;
 		margin-right: 0.5em;
 		text-align: center;
@@ -298,7 +300,8 @@ html {
 		border-width: 1px 0px 0px;
 		padding: 1em 2em;
 
-		.fa, .svg-inline--fa {
+		.fa,
+		.svg-inline--fa {
 			width: 2.5em;
 			margin: 0 0.75em;
 		}
@@ -327,7 +330,9 @@ html {
 		height: 1.1em;
 	}
 
-	.logo-img, .fa, .svg-inline--fa {
+	.logo-img,
+	.fa,
+	.svg-inline--fa {
 		display: inline-block;
 		width: 2.5em;
 		text-align: center;
