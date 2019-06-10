@@ -1,7 +1,6 @@
 /.cache
-/node_modules/*
-/build/*
-/build.zip
+/node_modules
+/public
 /REVISION.json
 /index.html
 /resume/index.html
