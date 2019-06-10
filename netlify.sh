@@ -4,6 +4,8 @@ set -e
 
 npm i -g yarn
 
+echo $FONTAWESOME_AUTH_TOKEN
+
 echo '@fortawesome:registry=https://npm.fontawesome.com/' > ~/.npmrc
 echo "//npm.fontawesome.com/:_authToken=$FONTAWESOME_AUTH_TOKEN" >> ~/.npmrc
 
