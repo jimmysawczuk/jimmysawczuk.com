@@ -61,6 +61,6 @@
 	</div>
 
 	{{ $rev := getJSON "REVISION.json" -}}
-	<!-- rev. {{ index $rev "hex" "short" }}; {{ index $rev "date" | parseTime | .Format "2-Jan-2006 15:04:05 MST" }} -->
+	<!-- rev. {{ index $rev "hex" "short" }}; {{ (index $rev "date" | parseTime).Format "2-Jan-2006 15:04:05 MST" }} -->
 </body>
 </html>
