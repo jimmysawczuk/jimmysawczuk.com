@@ -5,10 +5,9 @@ set -e
 go get github.com/jimmysawczuk/tmpl
 go get github.com/jimmysawczuk/scm-status
 
-echo $GOPATH/bin
-
 export PATH=$GOPATH/bin:$PATH
 
+scm-status -out=REVISION.json
 MODE=production tmpl -o public/index.html -timestamp-assets=false tmpl/index.tmpl
 MODE=production tmpl -o public/resume/index.html -timestamp-assets=false tmpl/resume.tmpl
 
