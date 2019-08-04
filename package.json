@@ -18,5 +18,8 @@
     "less": "^3.9.0",
     "normalize.css": "^8.0",
     "parcel-bundler": "^1.12"
+  },
+  "dependencies": {
+    "@fortawesome/pro-duotone-svg-icons": "^5.10.1"
   }
 }
