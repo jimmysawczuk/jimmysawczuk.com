@@ -13,6 +13,8 @@
     "@fortawesome/free-brands-svg-icons": "^5.10",
     "@fortawesome/pro-light-svg-icons": "^5.10",
     "autoprefixer": "^9.6",
+    "browserslist": "^4.6.6",
+    "caniuse-lite": "^1.0.30000988",
     "less": "^3.9.0",
     "normalize.css": "^8.0",
     "parcel-bundler": "^1.12"
