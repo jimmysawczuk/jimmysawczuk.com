@@ -1,7 +1,7 @@
 import "../less/main.less"
 
 import { library, dom } from "@fortawesome/fontawesome-svg-core"
-import { faEnvelopeOpen, faIdCard } from "@fortawesome/pro-light-svg-icons"
+import { faEnvelopeOpen, faIdCard } from "@fortawesome/pro-duotone-svg-icons"
 import {
 	faFacebookF,
 	faTwitter,
