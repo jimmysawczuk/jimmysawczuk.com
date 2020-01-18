@@ -60,7 +60,14 @@
     </div>
   </div>
 
-  {{ $rev := getJSON "REVISION.json" -}}
-  <!-- rev. {{ index $rev "hex" "short" }}; {{ (index $rev "date" | parseTime).Format "2-Jan-2006 15:04:05 MST" }} -->
+  <div id="rev">
+    {{ $rev := getJSON "REVISION.json" -}}
+    <a
+      href="https://github.com/jimmysawczuk/jimmysawczuk.com/commit/{{ index $rev "hex" "full" }}"
+      target="_blank"
+    >
+      rev. {{ index $rev "hex" "short" }}
+    </a>
+  </div>
 </body>
 </html>
