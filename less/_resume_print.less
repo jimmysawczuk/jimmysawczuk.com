@@ -1,74 +1,73 @@
-@page {
-	size: 8.5in 11in;
-	margin: 0.5in 0.5in 0.5in;
-}
-
-@page :first {
-	background-color: blue;
-	margin: 0.25in 0.5in 0.5in;
-}
+@import (inline) "_page.css";
 
 html {
-	margin: 0px;
-	padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
-	margin: 0px;
-	width: 7.5in;
-	background-color: white;
-	position: relative;
+  margin: 0px;
+  width: 7.5in;
+  background-color: white;
+  position: relative;
 }
 
 #content {
-	margin: 0px;
-	background: #fff;
-	width: 900px;
+  margin: 0px;
+  background: #fff;
+  width: 900px;
 
-	.container {
-		padding: 0px;
-		border-width: 0px;
-		box-shadow: none;
-		border-radius: 0px;
-		font-size: 108%;
-		background: #fff;
+  .container {
+    padding: 0px;
+    border-width: 0px;
+    box-shadow: none;
+    border-radius: 0px;
+    font-size: 108%;
+    background: #fff;
 
-		h1 {
-			letter-spacing: normal;
-			font-size: 80px;
-		}
+    h1 {
+      letter-spacing: normal;
+      font-size: 60px;
+    }
 
-		h3 {
-			letter-spacing: normal;
-		}
-	}
+    h3 {
+      letter-spacing: normal;
+    }
+  }
 }
 
 #footer {
-	display: none;
+  display: none;
 }
 
 #print-footer {
-	display: block;
-	margin: 3em auto 0;
-	width: 900px;
-	position: relative;
-	text-align: center;
+  display: block;
+  margin: 3em auto 0;
+  width: 900px;
+  position: relative;
+  text-align: center;
 
-	page-break-before: avoid;
-	.clearfix;
+  page-break-before: avoid;
+  .clearfix;
 
-	.container {
-		padding: 0px;
-		text-align: center;
-		color: #999;
-	}
+  .container {
+    padding: 0px;
+    text-align: center;
+    color: #999;
+  }
 
-	a {
-		@color: @linkColor;
-		color: @color;
-		&:active { color: @color; }
-		&:visited { color: @color; }
-		&:hover { text-decoration: none; color: @color; }
-	}
+  a {
+    @color: @linkColor;
+    color: @color;
+    &:active {
+      color: @color;
+    }
+    &:visited {
+      color: @color;
+    }
+    &:hover {
+      text-decoration: none;
+      color: @color;
+    }
+  }
 }
