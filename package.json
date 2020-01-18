@@ -4,7 +4,10 @@
   "author": "Jimmy Sawczuk <me@jimmysawczuk.com>",
   "license": "MIT",
   "scripts": {
-    "build": "parcel build --experimental-scope-hoisting -d public/dist src/*.js"
+    "watch": "parcel watch -d public/dist src/*.js",
+    "build": "parcel build --experimental-scope-hoisting -d public/dist src/*.js",
+    "minify-html": "html-minifier -o public/index.html public/index.html && html-minifier -o public/resume/index.html public/resume/index.html",
+    "prettier": "prettier --write src/*.js *.json less/*"
   },
   "private": true,
   "devDependencies": {
@@ -14,6 +17,7 @@
     "@fortawesome/pro-duotone-svg-icons": "^5.12",
     "@fortawesome/pro-light-svg-icons": "^5.12",
     "autoprefixer": "^9.6",
+    "html-minifier": "^4.0.0",
     "less": "^3.9.0",
     "normalize.css": "^8.0",
     "parcel-bundler": "^1.12"
