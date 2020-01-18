@@ -11,18 +11,6 @@
   text-shadow: @color @x @y @blur;
 }
 
-.transparent(@pct) {
-  @pctDecimal: @pct / 100;
-
-  zoom: 1;
-  filter: alpha(opacity= @pct);
-  opacity: @pctDecimal;
-}
-
-.clearboth() {
-  clear: both;
-}
-
 .clearfix() {
   &:after {
     display: block;
@@ -200,6 +188,10 @@ body {
 
       .extra {
         margin-top: 5px;
+      }
+
+      .extra.hidden {
+        display: none;
       }
     }
 

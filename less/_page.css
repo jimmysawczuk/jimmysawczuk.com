@@ -1,0 +1,8 @@
+@page {
+  size: 8.5in 11in;
+  margin: 0.5in 0.5in 0.5in;
+}
+
+@page :first {
+  margin: 0.25in 0.5in 0.5in;
+}
