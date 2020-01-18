@@ -4,7 +4,8 @@
   "author": "Jimmy Sawczuk <me@jimmysawczuk.com>",
   "license": "MIT",
   "scripts": {
-    "build": "parcel build --experimental-scope-hoisting -d public/dist src/*.js"
+    "build": "parcel build --experimental-scope-hoisting -d public/dist src/*.js",
+    "prettier": "prettier --write src/*.js *.json"
   },
   "private": true,
   "devDependencies": {
