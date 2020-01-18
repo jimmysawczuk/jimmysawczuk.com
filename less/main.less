@@ -91,6 +91,7 @@ html {
     @media (max-width: @cutoff) {
       position: absolute;
       bottom: 0;
+      margin-bottom: 1em;
 
       .links {
         display: block;
@@ -101,6 +102,7 @@ html {
       display: block;
       position: static;
       bottom: auto;
+      margin-bottom: 4em;
 
       .links {
         display: block;
@@ -295,6 +297,10 @@ html {
     border-width: 1px 0px 0px;
     padding: 1em 2em;
 
+    &:last-child {
+      border-width: 1px 0px;
+    }
+
     .fa,
     .svg-inline--fa {
       width: 2.5em;
@@ -371,7 +377,7 @@ html {
 }
 
 #rev {
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   padding: 0.5em;
@@ -386,5 +392,10 @@ html {
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  @media (max-width: @cutoff) {
+    left: 0;
+    text-align: center;
   }
 }
