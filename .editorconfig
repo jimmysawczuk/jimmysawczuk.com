@@ -8,6 +8,7 @@ indent_style = space
 
 [Makefile]
 indent_style = tab
+indent_size = 4
 
 [*.md]
 indent_size = 4
