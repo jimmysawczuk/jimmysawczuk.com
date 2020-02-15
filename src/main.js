@@ -21,4 +21,5 @@ library.add(
   faGithub,
   faTelegramPlane,
 )
+
 dom.i2svg()
