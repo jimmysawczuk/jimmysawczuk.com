@@ -2,8 +2,8 @@
 
 set -e
 
-go get github.com/jimmysawczuk/tmpl
-go get github.com/jimmysawczuk/scm-status
+go get -u github.com/jimmysawczuk/tmpl
+go get -u github.com/jimmysawczuk/scm-status
 
 export PATH=$GOPATH/bin:$PATH
 
