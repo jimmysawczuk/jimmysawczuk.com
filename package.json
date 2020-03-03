@@ -4,6 +4,7 @@
   "author": "Jimmy Sawczuk <me@jimmysawczuk.com>",
   "license": "MIT",
   "scripts": {
+    "tmpl": "tmpl -o public/index.html -fmt html -min tmpl/index.tmpl && tmpl -o public/resume/index.html -fmt html -min tmpl/resume.tmpl",
     "watch": "parcel watch -d public/dist src/*.js",
     "build": "parcel build --experimental-scope-hoisting -d public/dist src/*.js",
     "minify-html": "html-minifier -o public/index.html public/index.html && html-minifier -o public/resume/index.html public/resume/index.html",

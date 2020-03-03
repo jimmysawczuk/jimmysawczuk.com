@@ -40,13 +40,12 @@ body {
   background-color: #f9f9f9;
 }
 
-.block {
+.same-page {
   page-break-inside: avoid;
-  // border: 1px solid black;
 }
 
 #content {
-  width: 900px;
+  max-width: 800px;
   margin: 0.5em auto;
 
   .container {
@@ -119,75 +118,85 @@ body {
       }
     }
 
-    .education,
-    .experience {
-      .block;
-      clear: both;
-      margin: 1em auto 1.5em;
-      width: 96%;
-
-      div {
-        overflow: hidden;
-      }
-    }
-
     .education {
-      .dates {
-        float: left;
-        width: 30%;
-        font-weight: bold;
-      }
+      margin: 1em auto 1.5em;
+      display: flex;
+      flex-wrap: wrap;
 
       .school {
-        float: left;
-        width: 50%;
-        font-weight: bold;
+        flex: 0 0 45%;
+        font-weight: 700;
+        font-size: 1.25em;
+        line-height: 1.5;
       }
 
       .city {
-        float: left;
-        width: 20%;
-        clear: right;
-        font-weight: bold;
+        flex: 0 0 25%;
+        text-align: center;
+        font-size: 1.25em;
+        line-height: 1.5;
+      }
+
+      .span {
+        flex: 0 0 30%;
+        text-align: right;
+        font-size: 1.25em;
+        line-height: 1.5;
       }
 
       .degree {
-        clear: both;
-        font-style: italic;
-      }
-
-      .extra {
-        margin-top: 5px;
+        margin-top: 0.5em;
+        flex: 0 0 100%;
+        font-weight: 400;
       }
     }
 
     .experience {
-      .dates {
-        float: left;
-        width: 30%;
-        font-weight: bold;
-      }
+      margin: 1em auto 1.5em;
+      display: flex;
+      flex-wrap: wrap;
 
       .company {
-        float: left;
-        width: 50%;
-        font-weight: bold;
+        flex: 0 0 45%;
+        font-weight: 700;
+        font-size: 1.25em;
+        line-height: 1.5;
       }
 
       .city {
-        float: left;
-        width: 20%;
-        clear: right;
-        font-weight: bold;
+        flex: 0 0 25%;
+        text-align: center;
+        font-size: 1.25em;
+        line-height: 1.5;
+      }
+
+      .span {
+        flex: 0 0 30%;
+        text-align: right;
+        font-size: 1.25em;
+        line-height: 1.5;
       }
 
       .title {
-        clear: both;
+        flex: 0 0 70%;
+        font-weight: 400;
         font-style: italic;
       }
 
+      .title.full {
+        flex: 0 0 100%;
+      }
+
+      .title-date {
+        flex: 0 0 30%;
+        text-align: right;
+        color: #777;
+      }
+
       .extra {
-        margin-top: 5px;
+        flex: 0 0 100%;
+        margin-top: 0.5em;
+        padding-left: 2em;
       }
 
       .extra.hidden {
@@ -195,15 +204,9 @@ body {
       }
     }
 
-    .normal_list {
-      margin: 0px auto;
-      width: 96%;
-
-      ul {
-        li {
-          margin: 0.25em 0px;
-        }
-      }
+    .normal-list {
+      margin: 0.5em auto;
+      padding-left: 2em;
     }
 
     span.dot {
@@ -244,26 +247,6 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 910px) {
-  #content {
-    width: 100%;
-    margin: 0px;
-
-    .container {
-      box-shadow: none;
-      border-radius: 0px;
-      border: 0px;
-      padding: 20px 30px;
-    }
-  }
-
-  #footer {
-    font-size: 11px;
-    box-sizing: border-box;
-    padding: 0px 15px;
-  }
-}
-
 @media screen and (max-width: 500px) {
   html {
     font-size: 14px;
@@ -293,36 +276,71 @@ body {
       }
 
       h1 {
-        font-size: 3em;
+        font-size: 3.5em;
         text-align: center;
         margin: 0.5em 0;
         padding: 0 0.5em;
       }
 
       h3 {
-        font-size: 1.5em;
+        font-size: 2em;
         margin-top: 1em;
       }
 
       .education {
         margin: 1em 0;
 
-        .dates,
         .school,
+        .city,
+        .span {
+          flex: 0 0 100%;
+          text-align: left;
+        }
+
         .city {
-          float: none;
-          width: auto;
+          font-size: 1em;
+        }
+
+        .span {
+          font-size: 1em;
         }
       }
 
       .experience {
         margin: 1em 0;
 
-        .dates,
         .company,
+        .city,
+        .span {
+          flex: 0 0 100%;
+          text-align: left;
+        }
+
         .city {
-          float: none;
-          width: auto;
+          font-size: 1em;
+        }
+
+        .span {
+          font-size: 1em;
+        }
+
+        .span.hide-mobile {
+          display: none;
+        }
+
+        .title,
+        .title-date {
+          flex: 0 0 100%;
+          text-align: left;
+          font-style: normal;
+        }
+
+        .title {
+          margin-top: 0.5em;
+        }
+
+        .extra {
+          margin-top: 1.5em;
         }
       }
 
@@ -330,6 +348,10 @@ body {
         padding-left: 15px;
       }
     }
+  }
+
+  #footer {
+    font-size: 0.85em;
   }
 }
 
