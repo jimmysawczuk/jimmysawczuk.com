@@ -21,6 +21,7 @@
     "html-minifier": "^4.0.0",
     "less": "^3.9.0",
     "normalize.css": "^8.0",
-    "parcel-bundler": "^1.12"
+    "parcel-bundler": "^1.12",
+    "prettier": "^2.0.2"
   }
 }
