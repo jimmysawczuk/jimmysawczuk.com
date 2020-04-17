@@ -72,7 +72,7 @@
       href="https://github.com/jimmysawczuk/jimmysawczuk.com/commit/{{ index $rev "hex" "full" }}"
       target="_blank"
     >
-      rev. {{ index $rev "hex" "short" }}
+      {{- printf "rev. %s" (index $rev "hex" "short") -}}
     </a>
   </div>
 </body>
