@@ -1,4 +1,5 @@
-@import (inline) "../node_modules/normalize.css/normalize.css";
+@import (inline) "~normalize.css/normalize.css";
+@import "_type.less";
 
 @screen-md-max: 1000px;
 @screen-sm-max: 500px;
@@ -6,7 +7,7 @@
 
 @bodyFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
   Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-@titleFont: Quicksand, @bodyFont;
+@titleFont: "Quicksand", @bodyFont;
 
 html {
   font-size: 17px;
@@ -179,7 +180,7 @@ html {
       margin: 0;
       font-size: 3em;
       line-height: 1.1;
-      font-weight: 900;
+      font-weight: 700;
       text-transform: uppercase;
       user-select: none;
       font-family: @titleFont;
