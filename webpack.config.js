@@ -60,6 +60,8 @@ const config = {
 module.exports = (env, argv) => {
   if (argv.mode === "development") {
     delete config.optimization
+
+    config.devtool = "eval"
   }
 
   return config

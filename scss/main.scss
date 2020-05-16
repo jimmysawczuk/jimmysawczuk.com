@@ -128,30 +128,27 @@ body {
 
     .link {
       &.fb {
-        @include links.bottom-link(#44619d);
+        @include links.bottom-link(#44619d, #44619d);
       }
 
       &.tw {
-        @include links.bottom-link(#00aced);
+        @include links.bottom-link(#00aced, #00aced);
       }
 
       &.tg {
-        @include links.bottom-link(#0088cc);
+        @include links.bottom-link(#0088cc, #0088cc);
       }
 
       &.instagram {
-        @include links.bottom-link(#d047d1);
+        @include links.bottom-link(#d047d1, #d047d1);
       }
 
       &.linkedin {
-        @include links.bottom-link(#0077b5);
+        @include links.bottom-link(#0077b5, #0077b5);
       }
 
       &.github {
-        @include links.bottom-link(#222);
-        @include dark-mode() {
-          @include links.bottom-link(#fff);
-        }
+        @include links.bottom-link(#222, #fff);
       }
     }
   }
@@ -271,6 +268,12 @@ body {
 }
 
 #rev {
+  --color: #aaa;
+
+  @include dark-mode() {
+    --color: #777;
+  }
+
   position: fixed;
   right: 0;
   bottom: 0;
@@ -278,11 +281,14 @@ body {
   font-size: 0.85em;
 
   a {
+    transition: color 0.3s;
+
     &,
     &:active,
     &:visited,
     &:hover {
       color: #aaa;
+      color: var(--color);
       text-decoration: none;
     }
 

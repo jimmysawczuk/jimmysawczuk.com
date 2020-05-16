@@ -1,6 +1,6 @@
 @use "vars" as *;
 
-@mixin bottom-link($bg) {
+@mixin bottom-link($lightAccent, $darkAccent) {
   flex: 1 0 auto;
   display: inline-block;
   white-space: nowrap;
@@ -12,7 +12,7 @@
   text-decoration: none;
   transition: color 0.35s, border-color 0.35s;
 
-  @at-root body.dark-mode & {
+  @include dark-mode() {
     color: #898989;
   }
 
@@ -28,12 +28,12 @@
   }
 
   &:hover {
-    border-bottom: 1px solid $bg;
-    color: $bg;
+    border-bottom: 1px solid $lightAccent;
+    color: $lightAccent;
 
-    @at-root body.dark-mode & {
-      border-bottom: 1px solid $bg;
-      color: $bg;
+    @include dark-mode() {
+      border-bottom: 1px solid $darkAccent;
+      color: $darkAccent;
     }
   }
 
@@ -46,22 +46,32 @@
     padding: 1em;
     font-size: 1em;
     border: 1px solid #ddd;
+
+    &:hover {
+      border-color: $lightAccent;
+
+      @include dark-mode() {
+        border-color: $darkAccent;
+      }
+    }
   }
 
   @media (max-width: $screen-sm-max) {
     float: none;
     width: auto;
-    border-width: 1px 0px 0px;
+    border-width: 0px 0px 1px;
     padding: 1em 2em;
-
-    &:last-child {
-      border-width: 1px 0px;
-    }
 
     .fa,
     .svg-inline--fa {
       width: 2.5em;
       margin: 0 0.75em;
+    }
+  }
+
+  @include dark-mode() {
+    @media (max-width: $cutoff) {
+      border-color: #444;
     }
   }
 }
@@ -82,7 +92,7 @@
   margin: 0.75em auto;
   transition: background 0.3s;
 
-  @at-root body.dark-mode & {
+  @include dark-mode() {
     background: #555;
   }
 
