@@ -1,0 +1,304 @@
+@use "~normalize.css/normalize";
+@use "type";
+@use "vars" as *;
+@use "links";
+
+html {
+  box-sizing: border-box;
+  font-size: 17px;
+  line-height: 1.4;
+
+  @media (max-width: $screen-sm-max) {
+    font-size: 15px;
+    line-height: 1.2;
+  }
+}
+
+// apply a natural box layout model to all elements, but allowing components to change
+// per https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $bodyFont;
+  font-weight: 300;
+  color: #222;
+  background-color: #f9f9f9;
+  transition: background 0.3s;
+
+  @include dark-mode() {
+    background: #222;
+    color: #f9f9f9;
+  }
+}
+
+#dark-mode-switch {
+  .fa-sun {
+    display: inline-block;
+  }
+
+  .fa-moon {
+    display: none;
+  }
+
+  @include dark-mode() {
+    .fa-sun {
+      display: none;
+    }
+
+    .fa-moon {
+      display: inline-block;
+    }
+  }
+}
+
+#main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  @media (max-width: $cutoff) {
+    display: block;
+  }
+
+  .card {
+    flex: 0 1 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    @media (max-width: $cutoff) {
+      border: none;
+      min-height: 100vh;
+      position: relative;
+      padding-bottom: 20vh;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      padding-bottom: 0;
+    }
+  }
+
+  .top {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    min-height: 400px;
+
+    @media (max-width: $cutoff) {
+      display: block;
+      min-height: auto;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    width: 100%;
+
+    .links {
+      display: flex;
+      position: relative;
+      width: 100%;
+    }
+
+    @media (max-width: $cutoff) {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 1em;
+
+      .links {
+        display: block;
+      }
+    }
+
+    @media (max-width: $screen-sm-max) {
+      display: block;
+      position: static;
+      bottom: auto;
+
+      .links {
+        display: block;
+      }
+    }
+
+    .link {
+      &.fb {
+        @include links.bottom-link(#44619d, #44619d);
+      }
+
+      &.tw {
+        @include links.bottom-link(#00aced, #00aced);
+      }
+
+      &.tg {
+        @include links.bottom-link(#0088cc, #0088cc);
+      }
+
+      &.instagram {
+        @include links.bottom-link(#d047d1, #d047d1);
+      }
+
+      &.linkedin {
+        @include links.bottom-link(#0077b5, #0077b5);
+      }
+
+      &.github {
+        @include links.bottom-link(#222, #fff);
+      }
+    }
+  }
+
+  .img {
+    flex: 0 1 40%;
+    padding: 2em 2em;
+    padding-right: 0;
+
+    img {
+      width: 100%;
+      border-radius: 300px;
+    }
+
+    @include dark-mode() {
+      filter: brightness(0.8);
+      transition: filter 0.3s;
+    }
+
+    @media (max-width: $cutoff) {
+      max-width: 200px;
+      padding: 0;
+      margin: 1em auto;
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .details {
+    flex: 0 0 60%;
+    color: #222;
+    padding: 1em 2em 2em;
+    text-align: center;
+    transition: color 0.3s;
+
+    @include dark-mode() {
+      color: #f9f9f9;
+    }
+
+    .name {
+      margin: 0;
+      font-size: 3em;
+      line-height: 1.1;
+      font-weight: 700;
+      text-transform: uppercase;
+      user-select: none;
+      font-family: $titleFont;
+    }
+
+    .title {
+      font-weight: 300;
+      margin: 0;
+      color: #aaa;
+      font-size: 1.5em;
+      line-height: 1.1;
+      margin-bottom: 1.5em;
+      font-family: $bodyFont;
+      font-weight: 300;
+      user-select: none;
+
+      span {
+        white-space: nowrap;
+
+        &:after {
+          content: "·";
+          margin: 0 0.25em;
+        }
+
+        &:last-child:after {
+          display: none;
+        }
+      }
+    }
+
+    @media (max-width: $cutoff) {
+      .name,
+      .title {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: $screen-sm-max) {
+      .name {
+        font-size: 3em;
+      }
+
+      .title {
+        font-size: 1.5em;
+
+        span {
+          display: block;
+          line-height: 1.3;
+
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .links {
+      display: block;
+      margin-top: 2em;
+
+      @media (max-width: $screen-sm-max) {
+        display: block;
+      }
+
+      .link {
+        @include links.main-link();
+      }
+    }
+  }
+}
+
+#rev {
+  --color: #aaa;
+
+  @include dark-mode() {
+    --color: #777;
+  }
+
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 0.5em;
+  font-size: 0.85em;
+
+  a {
+    transition: color 0.3s;
+
+    &,
+    &:active,
+    &:visited,
+    &:hover {
+      color: #aaa;
+      color: var(--color);
+      text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: $cutoff) {
+    position: static;
+    text-align: center;
+  }
+}
