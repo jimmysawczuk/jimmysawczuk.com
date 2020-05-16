@@ -1,4 +1,4 @@
-import "../less/resume.less"
+import "../scss/resume.scss"
 
 function setPrintDate(el) {
   var d = new Date()

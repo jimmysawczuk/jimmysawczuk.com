@@ -1,4 +1,4 @@
-import "../less/main.less"
+import "../scss/main.scss"
 
 import { library, dom } from "@fortawesome/fontawesome-svg-core"
 import { faPaperPlane, faIdCard } from "@fortawesome/pro-duotone-svg-icons"
