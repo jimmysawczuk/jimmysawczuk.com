@@ -20,6 +20,7 @@ const config = {
     rules: [
       {
         test: /\.js$/,
+        exclude: /(node_modules)/,
         use: [
           {
             loader: "babel-loader",
@@ -31,14 +32,14 @@ const config = {
         ],
       },
       {
-        test: /\.less$/,
+        test: /\.scss$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
           },
           { loader: "css-loader" },
           { loader: "postcss-loader" },
-          { loader: "less-loader" },
+          { loader: "sass-loader" },
         ],
       },
       {
@@ -59,6 +60,8 @@ const config = {
 module.exports = (env, argv) => {
   if (argv.mode === "development") {
     delete config.optimization
+
+    config.devtool = "eval"
   }
 
   return config

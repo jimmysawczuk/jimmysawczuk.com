@@ -1,0 +1,146 @@
+@use "vars" as *;
+
+@mixin bottom-link($lightAccent, $darkAccent) {
+  flex: 1 0 auto;
+  display: inline-block;
+  white-space: nowrap;
+  text-align: center;
+  color: #565656;
+  border-bottom: 1px solid transparent;
+  font-size: 1em;
+  padding: 1em 1.25em 1em 0;
+  text-decoration: none;
+  transition: color 0.35s, border-color 0.35s;
+
+  @include dark-mode() {
+    color: #898989;
+  }
+
+  &:first-child {
+    border-left-width: 0;
+  }
+
+  .fa,
+  .svg-inline--fa {
+    width: 1.5em;
+    margin-right: 0.5em;
+    text-align: center;
+  }
+
+  &:hover {
+    border-bottom: 1px solid $lightAccent;
+    color: $lightAccent;
+
+    @include dark-mode() {
+      border-bottom: 1px solid $darkAccent;
+      color: $darkAccent;
+    }
+  }
+
+  @media (max-width: $cutoff) {
+    display: block;
+    float: left;
+    width: 33.33333%;
+    text-align: left;
+    margin: 0;
+    padding: 1em;
+    font-size: 1em;
+    border: 1px solid #ddd;
+
+    &:hover {
+      border-color: $lightAccent;
+
+      @include dark-mode() {
+        border-color: $darkAccent;
+      }
+    }
+  }
+
+  @media (max-width: $screen-sm-max) {
+    float: none;
+    width: auto;
+    border-width: 0px 0px 1px;
+    padding: 1em 2em;
+
+    .fa,
+    .svg-inline--fa {
+      width: 2.5em;
+      margin: 0 0.75em;
+    }
+  }
+
+  @include dark-mode() {
+    @media (max-width: $cutoff) {
+      border-color: #444;
+    }
+  }
+}
+
+@mixin main-link() {
+  display: block;
+  background: #333;
+  color: #fff;
+  font-size: 1em;
+  padding: 0.5em 0.75em;
+  white-space: nowrap;
+  vertical-align: middle;
+  line-height: 2.5;
+  text-decoration: none;
+  border-radius: 5px;
+  width: 80%;
+  text-align: left;
+  margin: 0.75em auto;
+  transition: background 0.3s;
+
+  @include dark-mode() {
+    background: #555;
+  }
+
+  .logo-img {
+    display: inline-block;
+    width: 2.5em;
+    text-align: center;
+    margin-right: 0.5em;
+    font-size: 1.1em;
+
+    img.section411-logo {
+      background: fadeOut(#fff, 60%);
+      display: inline-block;
+      vertical-align: middle;
+      height: 23px;
+      margin-top: -2px;
+    }
+  }
+
+  .fa,
+  .svg-inline--fa {
+    display: inline-block;
+    width: 2.5em;
+    text-align: center;
+    margin-right: 0.5em;
+    font-size: 1.1em;
+  }
+
+  @media (max-width: $cutoff) {
+    display: block;
+    width: 100%;
+  }
+
+  &.email {
+    &:hover {
+      background: #b00;
+    }
+  }
+
+  &.section411 {
+    &:hover {
+      background: #1e5f4b;
+    }
+  }
+
+  &.resume {
+    &:hover {
+      background: #369;
+    }
+  }
+}
