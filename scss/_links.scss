@@ -12,6 +12,10 @@
   text-decoration: none;
   transition: color 0.35s, border-color 0.35s;
 
+  @at-root body.dark-mode & {
+    color: #898989;
+  }
+
   &:first-child {
     border-left-width: 0;
   }
@@ -26,6 +30,11 @@
   &:hover {
     border-bottom: 1px solid $bg;
     color: $bg;
+
+    @at-root body.dark-mode & {
+      border-bottom: 1px solid $bg;
+      color: $bg;
+    }
   }
 
   @media (max-width: $cutoff) {
@@ -72,6 +81,10 @@
   text-align: left;
   margin: 0.75em auto;
   transition: background 0.3s;
+
+  @at-root body.dark-mode & {
+    background: #555;
+  }
 
   .logo-img {
     display: inline-block;

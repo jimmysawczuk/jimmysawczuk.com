@@ -4,6 +4,7 @@
 @use "links";
 
 html {
+  box-sizing: border-box;
   font-size: 17px;
   line-height: 1.4;
 
@@ -13,23 +14,45 @@ html {
   }
 }
 
+// apply a natural box layout model to all elements, but allowing components to change
+// per https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: $bodyFont;
   font-weight: 300;
   color: #222;
   background-color: #f9f9f9;
+  transition: background 0.3s;
+
+  @include dark-mode() {
+    background: #222;
+    color: #f9f9f9;
+  }
 }
 
-// apply a natural box layout model to all elements, but allowing components to change
-// per https://www.paulirish.com/2012/box-sizing-border-box-ftw/
-html {
-  box-sizing: border-box;
-}
+#dark-mode-switch {
+  .fa-sun {
+    display: inline-block;
+  }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+  .fa-moon {
+    display: none;
+  }
+
+  @include dark-mode() {
+    .fa-sun {
+      display: none;
+    }
+
+    .fa-moon {
+      display: inline-block;
+    }
+  }
 }
 
 #main-container {
@@ -126,6 +149,9 @@ html {
 
       &.github {
         @include links.bottom-link(#222);
+        @include dark-mode() {
+          @include links.bottom-link(#fff);
+        }
       }
     }
   }
@@ -138,6 +164,11 @@ html {
     img {
       width: 100%;
       border-radius: 300px;
+    }
+
+    @include dark-mode() {
+      filter: brightness(0.8);
+      transition: filter 0.3s;
     }
 
     @media (max-width: $cutoff) {
@@ -157,6 +188,11 @@ html {
     color: #222;
     padding: 1em 2em 2em;
     text-align: center;
+    transition: color 0.3s;
+
+    @include dark-mode() {
+      color: #f9f9f9;
+    }
 
     .name {
       margin: 0;

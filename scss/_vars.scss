@@ -9,3 +9,13 @@ $cutoff: 750px;
 $textColor: #222;
 $headerColor: desaturate(#369, 20%);
 $linkColor: $headerColor;
+
+@mixin dark-mode() {
+  @at-root body.dark-mode & {
+    @content;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}

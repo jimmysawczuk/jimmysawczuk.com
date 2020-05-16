@@ -1,7 +1,13 @@
 import "../scss/main.scss"
 
 import { library, dom } from "@fortawesome/fontawesome-svg-core"
-import { faPaperPlane, faIdCard } from "@fortawesome/pro-duotone-svg-icons"
+import {
+  faPaperPlane,
+  faIdCard,
+  faMoon,
+  faSun,
+  faToggleOn,
+} from "@fortawesome/pro-duotone-svg-icons"
 import {
   faFacebookF,
   faTwitter,
@@ -14,6 +20,10 @@ import {
 library.add(
   faPaperPlane,
   faIdCard,
+  faMoon,
+  faSun,
+  faToggleOn,
+
   faFacebookF,
   faTwitter,
   faInstagram,
