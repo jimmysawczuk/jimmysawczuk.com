@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "tmpl": "tmpl -o public/index.html -fmt html -min tmpl/index.tmpl && tmpl -o public/resume/index.html -fmt html -min tmpl/resume.tmpl",
-    "dev": "webpack -w --mode=development",
+    "dev": "tmpl -w -- webpack -w --mode=development",
     "build": "webpack --mode=production",
     "minify-html": "html-minifier -o public/index.html public/index.html && html-minifier -o public/resume/index.html public/resume/index.html",
     "prettier": "prettier --write src/*.js *.json scss/*"
