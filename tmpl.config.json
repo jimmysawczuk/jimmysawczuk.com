@@ -2,12 +2,18 @@
   {
     "in": "tmpl/index.tmpl",
     "out": "public/index.html",
-    "format": "html"
+    "format": "html",
+    "options": {
+      "minify": true
+    }
   },
   {
     "in": "tmpl/resume.tmpl",
     "out": "public/resume/index.html",
-    "format": "html"
+    "format": "html",
+    "options": {
+      "minify": true
+    }
   },
   {
     "in": "tmpl/sitemap.xml.tmpl",
