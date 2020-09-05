@@ -7,6 +7,10 @@
   font-size: var(--dark-mode-switch-icon-height, 17px);
   z-index: 200;
 
+  @media (prefers-color-scheme: dark) {
+    display: none;
+  }
+
   button {
     border: 0;
     background: transparent;
