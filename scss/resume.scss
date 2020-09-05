@@ -256,10 +256,6 @@ body {
     font-size: 14px;
   }
 
-  #dark-mode-switch {
-    display: none;
-  }
-
   #content {
     .container {
       padding: 0.5em 1em 5em;
@@ -385,6 +381,10 @@ body {
     height: 10in;
     background-color: white;
     position: relative;
+  }
+
+  #dark-mode-switch {
+    display: none;
   }
 
   #content {

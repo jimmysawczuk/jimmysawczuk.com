@@ -5,6 +5,7 @@
   top: 0;
   right: 0;
   font-size: var(--dark-mode-switch-icon-height, 17px);
+  z-index: 200;
 
   button {
     border: 0;
