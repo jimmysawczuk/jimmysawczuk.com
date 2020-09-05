@@ -4,12 +4,14 @@
   "author": "Jimmy Sawczuk <me@jimmysawczuk.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "tmpl -w -- webpack -w --mode=development",
-    "build": "webpack --mode=production",
+    "dark-mode": "babel --presets @babel/preset-env -o public/dist/dark-mode.js --minified src/dark-mode.js",
+    "dev": "yarn dark-mode && tmpl -w -- webpack -w --mode=development",
+    "build": "yarn dark-mode && webpack --mode=production",
     "prettier": "prettier --write 'src/**/*.*' '*.json' 'scss/**/*.*'"
   },
   "private": true,
   "devDependencies": {
+    "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.1",
     "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
