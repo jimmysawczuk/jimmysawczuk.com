@@ -9,7 +9,9 @@
   <script src="{{ asset "/dist/resume.js" }}" defer></script>
   <meta name="keywords" content="jimmy, sawczuk, james, resume, php, go, golang, javascript, aws, terraform, html, css, mysql, developer, software, engineer, programmer" />
   <meta name="description" content="The professional résumé of James J. (Jimmy) Sawczuk, a software engineer who currently lives and works in Rock Hill, SC." />
-  <script src="{{ asset "/dist/dark-mode.js" }}"></script>
+  <script>
+    {{- file  "public/dist/dark-mode.js" | safeJS -}}
+  </script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
