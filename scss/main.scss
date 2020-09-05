@@ -3,6 +3,8 @@
 @use "vars" as *;
 @use "links";
 
+$dark-mode-transition: 0.3s;
+
 html {
   box-sizing: border-box;
   font-size: 17px;
@@ -22,37 +24,25 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  font-family: $bodyFont;
-  font-weight: 300;
-  color: #222;
-  background-color: #f9f9f9;
-  transition: background 0.3s;
+:root {
+  --text-color: #222;
+  --bg-color: #f9f9f9;
+  --revision-color: #aaa;
 
   @include dark-mode() {
-    background: #222;
-    color: #f9f9f9;
+    --text-color: #f9f9f9;
+    --bg-color: #222;
+    --revision-color: #777;
   }
 }
 
-#dark-mode-switch {
-  .fa-sun {
-    display: inline-block;
-  }
-
-  .fa-moon {
-    display: none;
-  }
-
-  @include dark-mode() {
-    .fa-sun {
-      display: none;
-    }
-
-    .fa-moon {
-      display: inline-block;
-    }
-  }
+body {
+  font-family: $bodyFont;
+  font-weight: 300;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: background-color $dark-mode-transition,
+    color $dark-mode-transition;
 }
 
 #main-container {
@@ -157,6 +147,7 @@ body {
     flex: 0 1 40%;
     padding: 2em 2em;
     padding-right: 0;
+    transition: filter $dark-mode-transition;
 
     img {
       width: 100%;
@@ -165,7 +156,6 @@ body {
 
     @include dark-mode() {
       filter: brightness(0.8);
-      transition: filter 0.3s;
     }
 
     @media (max-width: $cutoff) {
@@ -182,14 +172,10 @@ body {
 
   .details {
     flex: 0 0 60%;
-    color: #222;
+    color: var(--text-color);
     padding: 1em 2em 2em;
     text-align: center;
-    transition: color 0.3s;
-
-    @include dark-mode() {
-      color: #f9f9f9;
-    }
+    transition: color $dark-mode-transition;
 
     .name {
       margin: 0;
@@ -268,12 +254,6 @@ body {
 }
 
 #rev {
-  --color: #aaa;
-
-  @include dark-mode() {
-    --color: #777;
-  }
-
   position: fixed;
   right: 0;
   bottom: 0;
@@ -281,14 +261,13 @@ body {
   font-size: 0.85em;
 
   a {
-    transition: color 0.3s;
+    transition: color $dark-mode-transition;
 
     &,
     &:active,
     &:visited,
     &:hover {
-      color: #aaa;
-      color: var(--color);
+      color: var(--revision-color);
       text-decoration: none;
     }
 
