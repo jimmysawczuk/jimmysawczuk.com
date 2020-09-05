@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dark-mode": "babel --presets @babel/preset-env -o public/dist/dark-mode.js --minified src/dark-mode.js",
-    "dev": "yarn dark-mode && tmpl -w -- webpack -w --mode=development",
-    "build": "yarn dark-mode && webpack --mode=production",
+    "dev": "tmpl -w -- webpack -w --mode=development",
+    "build": "webpack --mode=production",
     "prettier": "prettier --write 'src/**/*.*' '*.json' 'scss/**/*.*'"
   },
   "private": true,
