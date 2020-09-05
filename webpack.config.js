@@ -11,6 +11,7 @@ const config = {
   entry: {
     main: "./src/main.js",
     resume: "./src/resume.js",
+    "dark-mode": "./src/dark-mode.js",
   },
   output: {
     path: path.resolve(__dirname, "public/dist"),

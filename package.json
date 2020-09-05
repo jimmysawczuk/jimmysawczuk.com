@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tmpl -w -- webpack -w --mode=development",
     "build": "webpack --mode=production",
-    "prettier": "prettier --write src/*.js *.json scss/*"
+    "prettier": "prettier --write 'src/**/*.*' '*.json' 'scss/**/*.*'"
   },
   "private": true,
   "devDependencies": {

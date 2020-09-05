@@ -1,12 +1,12 @@
 import "../scss/main.scss"
+import "../scss/dark-mode-switch.scss"
 
 import { library, dom } from "@fortawesome/fontawesome-svg-core"
 import {
   faPaperPlane,
   faIdCard,
-  faMoon,
-  faSun,
-  faToggleOn,
+  faLightbulbSlash,
+  faLightbulbOn,
 } from "@fortawesome/pro-duotone-svg-icons"
 import {
   faFacebookF,
@@ -20,9 +20,8 @@ import {
 library.add(
   faPaperPlane,
   faIdCard,
-  faMoon,
-  faSun,
-  faToggleOn,
+  faLightbulbSlash,
+  faLightbulbOn,
 
   faFacebookF,
   faTwitter,

@@ -1,0 +1,41 @@
+@use "vars" as *;
+
+#dark-mode-switch {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  button {
+    border: 0;
+    background: transparent;
+    transition: color 0.3s;
+    color: var(--text-color);
+    height: var(--dark-mode-switch-height, 40px);
+    padding: var(--dark-mode-switch-padding, 5px 10px);
+    cursor: pointer;
+  }
+
+  svg .fa-primary,
+  svg .fa-secondary {
+    fill: var(--text-color);
+    opacity: 1;
+  }
+
+  .fa-lightbulb-on {
+    display: none;
+  }
+
+  .fa-lightbulb-slash {
+    display: block;
+  }
+
+  @include dark-mode() {
+    .fa-lightbulb-on {
+      display: block;
+    }
+
+    .fa-lightbulb-slash {
+      display: none;
+    }
+  }
+}
