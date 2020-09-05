@@ -4,6 +4,7 @@
   position: fixed;
   top: 0;
   right: 0;
+  font-size: var(--dark-mode-switch-icon-height, 17px);
 
   button {
     border: 0;
