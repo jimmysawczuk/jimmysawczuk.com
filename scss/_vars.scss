@@ -6,17 +6,25 @@ $screen-md-max: 1000px;
 $screen-sm-max: 500px;
 $cutoff: 750px;
 
-$textColor: #222;
-$headerColor: desaturate(#369, 20%);
-$linkColor: $headerColor;
+@mixin clearfix() {
+  &:after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
 
 @mixin dark-mode() {
-  @if "#{&}"=="body" {
+  @if "#{&}"=="html" {
     &.dark-mode {
       @content;
     }
+  } @else if "#{&}"==":root" {
+    @at-root html.dark-mode {
+      @content;
+    }
   } @else {
-    @at-root body.dark-mode & {
+    @at-root html.dark-mode & {
       @content;
     }
   }

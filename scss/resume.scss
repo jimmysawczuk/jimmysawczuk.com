@@ -2,13 +2,7 @@
 @use "type";
 @use "vars" as *;
 
-@mixin clearfix() {
-  &:after {
-    display: block;
-    content: "";
-    clear: both;
-  }
-}
+$dark-mode-transition: 0.3s;
 
 html {
   box-sizing: border-box;
@@ -20,15 +14,33 @@ html {
   box-sizing: inherit;
 }
 
+:root {
+  --text-color: #222;
+  --bg-color: #f9f9f9;
+  --header-color: #{darken(#369, 10%)};
+  --link-color: #{darken(#369, 10%)};
+  --text-muted-color: #777;
+
+  @include dark-mode() {
+    --text-color: #f9f9f9;
+    --bg-color: #222;
+    --header-color: #{lighten(#369, 20%)};
+    --link-color: #{lighten(#369, 20%)};
+    --text-muted-color: #aaa;
+  }
+}
+
 html {
   font-size: 14px;
 }
 
 body {
   font-family: $bodyFont;
-  color: $textColor;
+  color: var(--text-color);
   line-height: 1.5;
-  background-color: #f9f9f9;
+  background-color: var(--bg-color);
+  transition: color $dark-mode-transition,
+    background-color $dark-mode-transition;
 }
 
 .same-page {
@@ -53,7 +65,8 @@ body {
         &:active,
         &:visited,
         &:hover {
-          color: $textColor;
+          color: var(--text-color);
+          transition: color $dark-mode-transition;
         }
 
         &:hover {
@@ -73,23 +86,25 @@ body {
     h1 {
       font-family: $titleFont;
       font-weight: 700;
-      color: $headerColor;
+      color: var(--header-color);
       text-transform: uppercase;
       text-align: center;
       font-size: 4.5em;
       line-height: 1.5;
       margin: 0.25em 0;
+      transition: color $dark-mode-transition;
     }
 
     h3 {
       font-family: $titleFont;
       font-weight: 500;
-      color: $headerColor;
+      color: var(--header-color);
       font-size: 2em;
       line-height: 1.5;
       text-transform: uppercase;
       border-bottom: 1px solid #bbb;
       margin: 0.5em 0px;
+      transition: color $dark-mode-transition;
     }
 
     a {
@@ -97,7 +112,8 @@ body {
       &:active,
       &:visited,
       &:hover {
-        color: $linkColor;
+        color: var(--link-color);
+        transition: color $dark-mode-transition;
       }
 
       &:hover {
@@ -177,7 +193,8 @@ body {
       .title-date {
         flex: 0 0 30%;
         text-align: right;
-        color: #777;
+        color: var(--text-muted-color);
+        transition: color $dark-mode-transition;
       }
 
       .extra {
@@ -208,7 +225,8 @@ body {
   margin: 1.5em 0px 2em;
   font-size: 85%;
   text-align: center;
-  color: #444;
+  color: var(--text-muted-color);
+  transition: color $dark-mode-transition;
 
   .line {
     white-space: nowrap;
@@ -219,7 +237,8 @@ body {
     &:active,
     &:visited,
     &:hover {
-      color: #444;
+      color: var(--text-muted-color);
+      transition: color $dark-mode-transition;
     }
 
     &:hover {
@@ -364,6 +383,10 @@ body {
     position: relative;
   }
 
+  #dark-mode-switch {
+    display: none;
+  }
+
   #content {
     margin: 0px auto;
     background: #fff;
@@ -415,7 +438,7 @@ body {
       &:active,
       &:visited,
       &:hover {
-        color: $linkColor;
+        color: var(--link-color);
       }
 
       &:hover {

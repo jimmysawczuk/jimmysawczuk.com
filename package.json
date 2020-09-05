@@ -4,15 +4,16 @@
   "author": "Jimmy Sawczuk <me@jimmysawczuk.com>",
   "license": "MIT",
   "scripts": {
+    "dark-mode": "babel --presets @babel/preset-env -o public/dist/dark-mode.js --minified src/dark-mode.js",
     "dev": "tmpl -w -- webpack -w --mode=development",
     "build": "webpack --mode=production",
-    "prettier": "prettier --write src/*.js *.json scss/*"
+    "prettier": "prettier --write 'src/**/*.*' '*.json' 'scss/**/*.*'"
   },
   "private": true,
   "devDependencies": {
-    "@babel/core": "^7.11.1",
-    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
-    "@babel/preset-env": "^7.11.0",
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
     "@fortawesome/fontawesome-pro": "^5.14.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
@@ -20,18 +21,18 @@
     "@fortawesome/pro-light-svg-icons": "^5.14.0",
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.1.0",
-    "css-loader": "^4.2.1",
-    "file-loader": "^6.0.0",
+    "css-loader": "^4.2.2",
+    "file-loader": "^6.1.0",
     "html-minifier": "^4.0.0",
-    "mini-css-extract-plugin": "^0.9.0",
+    "mini-css-extract-plugin": "^0.11.0",
     "normalize.css": "^8.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
     "postcss-loader": "^3.0.0",
-    "prettier": "^2.0.5",
+    "prettier": "^2.1.1",
+    "sass-loader": "^10.0.2",
     "sass": "^1.26.10",
-    "sass-loader": "^9.0.3",
-    "terser-webpack-plugin": "^4.0.0",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "terser-webpack-plugin": "^4.1.0",
+    "webpack-cli": "^3.3.12",
+    "webpack": "^4.44.1"
   }
 }
