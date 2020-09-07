@@ -4,6 +4,7 @@ set -e
 
 wget https://github.com/jimmysawczuk/tmpl/releases/download/v2.0.0/tmpl-v2.0.0-linux-amd64
 mv tmpl-v2.0.0-linux-amd64 $GOPATH/bin/tmpl
+chmod +x $GOPATH/bin/tmpl
 
 go get -u github.com/jimmysawczuk/scm-status
 
