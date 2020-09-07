@@ -2,7 +2,9 @@
 
 set -e
 
-go get -u github.com/jimmysawczuk/tmpl
+wget https://github.com/jimmysawczuk/tmpl/releases/download/v2.0.0/tmpl-v2.0.0-linux-amd64
+mv tmpl-v2.0.0-linux-amd64 $GOPATH/bin/tmpl
+
 go get -u github.com/jimmysawczuk/scm-status
 
 export PATH=$GOPATH/bin:$PATH
