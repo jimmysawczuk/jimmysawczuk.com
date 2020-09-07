@@ -6,7 +6,9 @@ wget https://github.com/jimmysawczuk/tmpl/releases/download/v2.0.0/tmpl-v2.0.0-l
 mv tmpl-v2.0.0-linux-amd64 $GOPATH/bin/tmpl
 chmod +x $GOPATH/bin/tmpl
 
-go get -u github.com/jimmysawczuk/scm-status
+wget https://github.com/jimmysawczuk/scm-status/releases/download/v2.2.0/scm-status-v2.2.0-linux-amd64
+mv scm-status-v2.2.0-linux-amd64 $GOPATH/bin/scm-status
+chmod +x $GOPATH/bin/scm-status
 
 export PATH=$GOPATH/bin:$PATH
 
