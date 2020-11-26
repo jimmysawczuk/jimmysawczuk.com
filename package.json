@@ -1,5 +1,5 @@
 {
-  "name": "jimmysawczuk.com",
+  "name": "@jimmysawczuk/jimmysawczuk.com",
   "version": "2.0.0",
   "author": "Jimmy Sawczuk <me@jimmysawczuk.com>",
   "license": "MIT",
@@ -19,6 +19,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
     "@fortawesome/pro-duotone-svg-icons": "^5.14.0",
     "@fortawesome/pro-light-svg-icons": "^5.14.0",
+    "@fullhuman/postcss-purgecss": "^3.0.0",
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.1.0",
     "css-loader": "^4.3.0",
