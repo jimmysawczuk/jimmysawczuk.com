@@ -6,7 +6,10 @@ module.exports = {
     autoprefixer,
     purgecss({
       content: ["./tmpl/*.tmpl"],
-      safelist: ["svg-inline--fa"],
+      safelist: {
+        standard: ["svg-inline--fa"],
+        deep: ["dark-mode-switch"],
+      },
     }),
   ],
 }
