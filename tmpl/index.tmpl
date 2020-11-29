@@ -30,7 +30,7 @@
 <body>
   <div id="main-container">
     <div id="dark-mode-switch">
-      <button id="dark-mode-switch-btn" name="Dark Mode Switch">
+      <button id="dark-mode-switch-btn" aria-label="Dark Mode Switch">
         <i class="fad fa-lightbulb-slash"></i>
         <i class="fad fa-lightbulb-on"></i>
       </button>
@@ -80,6 +80,7 @@
     <a
       href="https://github.com/jimmysawczuk/jimmysawczuk.com/commit/{{ index $rev "hex" "full" }}"
       target="_blank"
+      rel="noopener"
     >
       {{- printf "rev. %s" (index $rev "hex" "short") -}}
     </a>
