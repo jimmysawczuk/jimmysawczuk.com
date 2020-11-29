@@ -17,4 +17,4 @@ scm-status -out=REVISION.json
 yarn dark-mode
 tmpl
 yarn build
-cp -R img *.png *.xml *.ico REVISION.json manifest.json _redirects _headers public/
+cp -R img *.png *.xml *.ico REVISION.json manifest.json site.webmanifest _redirects _headers public/
