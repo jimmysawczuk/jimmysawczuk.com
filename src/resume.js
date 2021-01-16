@@ -1,15 +1,15 @@
 import "../scss/resume.scss"
 import "../scss/dark-mode-switch.scss"
 
-import { library, dom } from "@fortawesome/fontawesome-svg-core"
-import {
-  faLightbulbSlash,
-  faLightbulbOn,
-} from "@fortawesome/pro-duotone-svg-icons"
+// import { library, dom } from "@fortawesome/fontawesome-svg-core"
+// import {
+//   faLightbulbSlash,
+//   faLightbulbOn,
+// } from "@fortawesome/pro-duotone-svg-icons"
 
-library.add(faLightbulbSlash, faLightbulbOn)
+// library.add(faLightbulbSlash, faLightbulbOn)
 
-dom.i2svg()
+// dom.i2svg()
 
 function setPrintDate(el) {
   var d = new Date()

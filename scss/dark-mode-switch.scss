@@ -27,21 +27,27 @@
     opacity: 1;
   }
 
-  .fa-lightbulb-on {
-    display: none;
+  .svg-inline--fa {
+    width: 1.5em;
+    height: 1.1em;
+    vertical-align: -0.125em;
   }
 
-  .fa-lightbulb-slash {
+  .fa-sun {
     display: block;
   }
 
+  .fa-moon {
+    display: none;
+  }
+
   @include dark-mode() {
-    .fa-lightbulb-on {
-      display: block;
+    .fa-sun {
+      display: none;
     }
 
-    .fa-lightbulb-slash {
-      display: none;
+    .fa-moon {
+      display: block;
     }
   }
 }

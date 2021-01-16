@@ -1,12 +1,12 @@
 const path = require("path")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const TerserJSPlugin = require("terser-webpack-plugin")
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 const config = {
   plugins: [new MiniCssExtractPlugin()],
   optimization: {
-    minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
+    minimizer: [new TerserJSPlugin({}), new CssMinimizerPlugin({})],
   },
   entry: {
     main: "./src/main.js",

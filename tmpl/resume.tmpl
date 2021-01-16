@@ -25,9 +25,9 @@
 </head>
 <body>
   <div id="dark-mode-switch">
-    <button id="dark-mode-switch-btn">
-      <i class="fad fa-lightbulb-slash"></i>
-      <i class="fad fa-lightbulb-on"></i>
+    <button id="dark-mode-switch-btn" aria-label="Dark Mode Switch">
+      {{ file "./svg/fa/solid/sun.svg" | safeHTML }}
+      {{ file "./svg/fa/solid/moon.svg" | safeHTML }}
     </button>
   </div>
   <div id="content">
