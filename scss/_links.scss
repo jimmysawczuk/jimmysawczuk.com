@@ -22,8 +22,10 @@
 
   .svg-inline--fa {
     width: 1.5em;
+    height: 1.1em;
     margin-right: 0.5em;
     text-align: center;
+    vertical-align: -0.125em;
   }
 
   &:hover {
@@ -99,7 +101,6 @@
     width: 2.5em;
     text-align: center;
     margin-right: 0.5em;
-    font-size: 1.1em;
 
     img.section411-logo {
       display: inline-block;
@@ -111,10 +112,11 @@
 
   .svg-inline--fa {
     display: inline-block;
+    height: 1.1em;
     width: 2.5em;
     text-align: center;
     margin-right: 0.5em;
-    font-size: 1.1em;
+    vertical-align: -0.125em;
   }
 
   @media (max-width: $cutoff) {
