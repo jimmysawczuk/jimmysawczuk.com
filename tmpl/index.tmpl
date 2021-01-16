@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Jimmy Sawczuk</title>
   <link href="{{ asset "/dist/main.css" }}" type="text/css" rel="stylesheet" />
-  <script src="{{ asset "/dist/main.js" }}" defer></script>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -31,8 +30,8 @@
   <div id="main-container">
     <div id="dark-mode-switch">
       <button id="dark-mode-switch-btn" aria-label="Dark Mode Switch">
-        <i class="fad fa-lightbulb-slash"></i>
-        <i class="fad fa-lightbulb-on"></i>
+        {{ file "./svg/fa/solid/sun.svg" | safeHTML }}
+        {{ file "./svg/fa/solid/moon.svg" | safeHTML }}
       </button>
     </div>
 
@@ -51,25 +50,37 @@
 
           <div class="links">
             <a href="mailto:hello@jimmysawczuk.com" class="link email" target="_blank">
-              <i class="fad fa-paper-plane fa-fw"></i> E-mail
+              {{ file "./svg/fa/duotone/paper-plane.svg" | safeHTML }} E-mail
             </a>
             <a href="https://section411.com" class="link section411" target="_blank" rel="noopener">
               <div class="logo-img"><img class="section411-logo" alt="Section 411" src="/img/section411-logo.png" /></div> Section 411
             </a>
             <a href="/resume" class="link resume">
-              <i class="fad fa-id-card fa-fw"></i> Résumé
+              {{ file "./svg/fa/duotone/address-card.svg" | safeHTML }} Résumé
             </a>
           </div>
         </div>
       </div>
       <div class="bottom">
         <div class="links">
-          <a href="https://facebook.com/jimmysawczuk" class="link fb" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i> Facebook</a>
-          <a href="https://twitter.com/jimmysawczuk" class="link tw" target="_blank" rel="noopener"><i class="fab fa-twitter"></i> Twitter</a>
-          <a href="https://t.me/jimmysawczuk" class="link tg" target="_blank" rel="noopener"><i class="fab fa-telegram-plane"></i> Telegram</a>
-          <a href="https://instagram.com/jimmysawczuk" class="link instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a>
-          <a href="https://linkedin.com/in/jimmysawczuk" class="link linkedin" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-          <a href="https://github.com/jimmysawczuk" class="link github" target="_blank" rel="noopener"><i class="fab fa-github"></i> Github</a>
+          <a href="https://facebook.com/jimmysawczuk" class="link fb" target="_blank" rel="noopener">
+            {{ file "./svg/fa/brands/facebook-f.svg" | safeHTML }} Facebook
+          </a>
+          <a href="https://twitter.com/jimmysawczuk" class="link tw" target="_blank" rel="noopener">
+            {{ file "./svg/fa/brands/twitter.svg" | safeHTML }} Twitter
+          </a>
+          <a href="https://t.me/jimmysawczuk" class="link tg" target="_blank" rel="noopener">
+            {{ file "./svg/fa/brands/telegram-plane.svg" | safeHTML }} Telegram
+          </a>
+          <a href="https://instagram.com/jimmysawczuk" class="link instagram" target="_blank" rel="noopener">
+            {{ file "./svg/fa/brands/instagram.svg" | safeHTML }} Instagram
+          </a>
+          <a href="https://linkedin.com/in/jimmysawczuk" class="link linkedin" target="_blank" rel="noopener">
+            {{ file "./svg/fa/brands/linkedin-in.svg" | safeHTML }} LinkedIn
+          </a>
+          <a href="https://github.com/jimmysawczuk" class="link github" target="_blank" rel="noopener">
+            {{ file "./svg/fa/brands/github.svg" | safeHTML }} Github
+          </a>
         </div>
       </div>
     </div>
