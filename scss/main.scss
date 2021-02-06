@@ -183,24 +183,51 @@ body {
 
     .name {
       margin: 0;
+      position: relative;
       font-size: 3em;
       line-height: 1.1;
       font-weight: 700;
       text-transform: uppercase;
       user-select: none;
       font-family: $titleFont;
+      color: #3b82f6;
+      transition: color $dark-mode-transition;
+
+      &::before {
+        position: absolute;
+        content: "Jimmy Sawczuk";
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(#a3cc00, darken(#a3cc00, 10%));
+        opacity: 0;
+        z-index: 1;
+        transition: opacity $dark-mode-transition;
+        background-clip: text;
+        text-shadow: 0.05em 0.05em 0.5em fade-out(#a3cc00, 0.4);
+      }
+
+      @include dark-mode() {
+        color: transparent;
+
+        &::before {
+          opacity: 1;
+        }
+      }
     }
 
     .title {
       font-weight: 300;
       margin: 0;
-      color: #aaa;
+      color: #444;
       font-size: 1.5em;
       line-height: 1.1;
       margin-bottom: 1.5em;
       font-family: $bodyFont;
       font-weight: 300;
       user-select: none;
+      transition: color $dark-mode-transition;
 
       span {
         white-space: nowrap;
@@ -213,6 +240,10 @@ body {
         &:last-child:after {
           display: none;
         }
+      }
+
+      @include dark-mode() {
+        color: #777;
       }
     }
 

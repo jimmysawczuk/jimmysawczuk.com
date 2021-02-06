@@ -15,7 +15,7 @@ $cutoff: 750px;
 }
 
 @mixin dark-mode() {
-   @if ("#{&}"=="html" or "#{&}"==":root") {
+  @if ("#{&}"=="html"or"#{&}"==":root") {
     @at-root html.dark-mode {
       @content;
     }
