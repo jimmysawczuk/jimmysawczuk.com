@@ -25,14 +25,14 @@ html {
 }
 
 :root {
-  --text-color: #222;
-  --bg-color: #f9f9f9;
-  --revision-color: #aaa;
+  --text-color: #1f2937;
+  --bg-color: #f9fafb;
+  --revision-color: #d1d5db;
 
   @include dark-mode() {
-    --text-color: #f9f9f9;
-    --bg-color: #222;
-    --revision-color: #777;
+    --text-color: #f9fafb;
+    --bg-color: #1f2937;
+    --revision-color: #6b7280;
   }
 }
 
@@ -200,12 +200,12 @@ body {
         top: 0;
         right: 0;
         bottom: 0;
-        background: radial-gradient(#a3cc00, darken(#a3cc00, 10%));
+        background: radial-gradient(#60a5fa, #3b82f6);
         opacity: 0;
         z-index: 1;
         transition: opacity $dark-mode-transition;
         background-clip: text;
-        text-shadow: 0.05em 0.05em 0.5em fade-out(#a3cc00, 0.4);
+        text-shadow: 0.05em 0.05em 0.5em fade-out(#60a5fa, 0.4);
       }
 
       @include dark-mode() {
@@ -223,7 +223,7 @@ body {
       color: #9ca3af;
       font-size: 1.5em;
       line-height: 1.1;
-      margin-bottom: 1.5em;
+      margin: 0.25em 0 1.5em;
       font-family: $bodyFont;
       font-weight: 300;
       user-select: none;
