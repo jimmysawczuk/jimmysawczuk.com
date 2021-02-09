@@ -5,7 +5,7 @@
   display: inline-block;
   white-space: nowrap;
   text-align: center;
-  color: #565656;
+  color: #374151;
   border-bottom: 1px solid transparent;
   font-size: 1em;
   padding: 1em 1.25em 1em 0;
@@ -13,7 +13,7 @@
   transition: color 0.35s, border-color 0.35s;
 
   @include dark-mode() {
-    color: #898989;
+    color: #6b7280;
   }
 
   &:first-child {
@@ -78,7 +78,7 @@
 
 @mixin main-link() {
   display: block;
-  background: #333;
+  background: #374151;
   color: #fff;
   font-size: 1em;
   padding: 0.5em 0.75em;
@@ -93,7 +93,7 @@
   transition: background 0.3s;
 
   @include dark-mode() {
-    background: #555;
+    background: #6b7280;
   }
 
   .logo-img {
@@ -126,7 +126,7 @@
 
   &.email {
     &:hover {
-      background: #b00;
+      background: #1d4ed8;
     }
   }
 
@@ -138,7 +138,7 @@
 
   &.resume {
     &:hover {
-      background: #369;
+      background: #1d4ed8;
     }
   }
 }

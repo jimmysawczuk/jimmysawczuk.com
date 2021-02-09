@@ -17,8 +17,8 @@ html {
 :root {
   --text-color: #222;
   --bg-color: #f9f9f9;
-  --header-color: #3b82f6;
-  --link-color: #3b82f6;
+  --header-color: #1e40af;
+  --link-color: #1e40af;
   --text-muted-color: #777;
 
   @include dark-mode() {

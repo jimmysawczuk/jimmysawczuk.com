@@ -190,7 +190,7 @@ body {
       text-transform: uppercase;
       user-select: none;
       font-family: $titleFont;
-      color: #3b82f6;
+      color: #1f2937;
       transition: color $dark-mode-transition;
 
       &::before {
@@ -220,7 +220,7 @@ body {
     .title {
       font-weight: 300;
       margin: 0;
-      color: #444;
+      color: #9ca3af;
       font-size: 1.5em;
       line-height: 1.1;
       margin-bottom: 1.5em;
@@ -240,10 +240,6 @@ body {
         &:last-child:after {
           display: none;
         }
-      }
-
-      @include dark-mode() {
-        color: #777;
       }
     }
 
