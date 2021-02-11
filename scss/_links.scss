@@ -5,7 +5,7 @@
   display: inline-block;
   white-space: nowrap;
   text-align: center;
-  color: #565656;
+  color: #374151;
   border-bottom: 1px solid transparent;
   font-size: 1em;
   padding: 1em 1.25em 1em 0;
@@ -13,7 +13,7 @@
   transition: color 0.35s, border-color 0.35s;
 
   @include dark-mode() {
-    color: #898989;
+    color: #6b7280;
   }
 
   &:first-child {
@@ -46,7 +46,7 @@
     margin: 0;
     padding: 1em;
     font-size: 1em;
-    border: 1px solid #ddd;
+    border: 1px solid #d1d5db;
 
     &:hover {
       border-color: $lightAccent;
@@ -71,14 +71,14 @@
 
   @include dark-mode() {
     @media (max-width: $cutoff) {
-      border-color: #444;
+      border-color: #4b5563;
     }
   }
 }
 
 @mixin main-link() {
   display: block;
-  background: #333;
+  background: #374151;
   color: #fff;
   font-size: 1em;
   padding: 0.5em 0.75em;
@@ -93,7 +93,7 @@
   transition: background 0.3s;
 
   @include dark-mode() {
-    background: #555;
+    background: #6b7280;
   }
 
   .logo-img {
@@ -124,21 +124,13 @@
     width: 100%;
   }
 
-  &.email {
-    &:hover {
-      background: #b00;
-    }
+  &:hover {
+    background: #1e40af;
   }
 
-  &.section411 {
+  @include dark-mode() {
     &:hover {
-      background: #1e5f4b;
-    }
-  }
-
-  &.resume {
-    &:hover {
-      background: #369;
+      background: #1e3a8a;
     }
   }
 }
