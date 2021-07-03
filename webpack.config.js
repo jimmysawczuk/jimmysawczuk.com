@@ -1,7 +1,7 @@
 const path = require("path")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const TerserJSPlugin = require("terser-webpack-plugin")
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
 
 const config = {
   plugins: [new MiniCssExtractPlugin()],
@@ -33,14 +33,13 @@ const config = {
         ],
       },
       {
-        test: /\.scss$/,
+        test: /\.css$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
           },
           { loader: "css-loader" },
           { loader: "postcss-loader" },
-          { loader: "sass-loader" },
         ],
       },
       {
