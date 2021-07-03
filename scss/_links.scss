@@ -96,20 +96,6 @@
     background: #6b7280;
   }
 
-  .logo-img {
-    display: inline-block;
-    width: 2.5em;
-    text-align: center;
-    margin-right: 0.5em;
-
-    img.section411-logo {
-      display: inline-block;
-      vertical-align: middle;
-      height: 23px;
-      margin-top: -2px;
-    }
-  }
-
   .svg-inline--fa {
     display: inline-block;
     height: 1.1em;
@@ -117,6 +103,15 @@
     text-align: center;
     margin-right: 0.5em;
     vertical-align: -0.125em;
+  }
+
+  .section411-logo {
+    display: inline-block;
+    height: 1.5em;
+    width: 2.5em;
+    text-align: center;
+    margin-right: 0.5em;
+    vertical-align: -0.3em;
   }
 
   @media (max-width: $cutoff) {
