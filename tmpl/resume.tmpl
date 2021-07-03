@@ -4,149 +4,106 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>James J. Sawczuk – Software Engineer</title>
-  <link href="{{ asset "/dist/resume.css" }}" rel="stylesheet" type="text/css" />
+  <link href="{{ asset "/dist/main.css" }}" rel="stylesheet" type="text/css" />
   <script src="{{ asset "/dist/resume.js" }}" defer></script>
   <meta name="keywords" content="jimmy, sawczuk, james, resume, php, go, golang, javascript, aws, terraform, html, css, mysql, developer, software, engineer, programmer" />
   <meta name="description" content="The professional résumé of James J. (Jimmy) Sawczuk, a software engineer who currently lives and works in Rock Hill, SC." />
-  <script>
-    {{- file  "public/dist/dark-mode.js" | safeJS -}}
-  </script>
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "289e9cf35c8e4348a1bb08c16aec7104"}'></script>
 </head>
-<body>
-  <div id="dark-mode-switch">
-    <button id="dark-mode-switch-btn" aria-label="Dark Mode Switch">
-      {{ svg "./svg/fa/solid/sun.svg" }}
-      {{ svg "./svg/fa/solid/moon.svg" }}
-    </button>
-  </div>
-  <div id="content">
-    <div class="container">
-      <h2>
-        <span class="line"><b>phone</b> (440) 796-7806</span>
-        <span class="dot">&middot;</span>
-        <span class="line"><b>e-mail</b> <a href="mailto:me@jimmysawczuk.com" target="_blank">me@jimmysawczuk.com</a></span>
-        <span class="dot">&middot;</span>
-        <span class="line"><b>web</b> <a href="https://jimmysawczuk.com" target="_blank">jimmysawczuk.com</a></span>
-      </h2>
-      <h1>James J. Sawczuk</h1>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors text-gray-800 dark:text-gray-300 relative">
+  <div class="mx-auto max-w-screen-lg py-4 print:pt-0">
+    <div class="section mt-0">
+      <div class="text-sm text-center leading-normal">
+        <div class="block sm:inline-block sm:after:inline-block sm:after:mx-2 sm:after:content-['·']"><strong>phone</strong> (440) 796-7806</div>
+        <div class="block sm:inline-block sm:after:inline-block sm:after:mx-2 sm:after:content-['·']"><strong>email</strong> <a href="mailto:hello@jimmysawczuk.com" target="_blank" class="link-std">hello@jimmysawczuk.com</a></div>
+        <div class="block sm:inline-block"><strong>web</strong> <a href="https://jimmysawczuk.com" target="_blank" class="link-std">jimmysawczuk.com</a></div>
+      </div>
+      <div class="text-5xl md:text-6xl print:text-5xl text-center text-transparent bg-clip-text bg-gradient-to-t from-green-400 to-blue-500 dark:from-green-300 dark:to-blue-500 dark:text-shadow-lg transition-all print:text-blue-500">
+        <h1 class="font-title font-bold uppercase leading-relaxed print:leading-normal">James J. Sawczuk</h1>
+      </div>
+    </div>
 
-      <div>
-        <h3>Education</h3>
-        <div class="education">
-          <div class="school">
-            Case Western Reserve University
-          </div>
+    <div class="section">
+      <h3 class="section-header">Education</h3>
 
-          <div class="city">
-            Cleveland, OH
-          </div>
-
-          <div class="span">
-            Aug. 2005 – May 2009
-          </div>
-
-          <div class="degree">
+      <div class="py-4 same-page">
+        <div class="experience">
+          <div class="company">Case Western Reserve University</div>
+          <div class="location">Cleveland, OH</div>
+          <div class="dates">Aug. 2005 - May 2009</div>
+        </div>
+        <div class="title">
+          <div class="name">
             Bachelor of Science, Computer Science<br />
             Minor, Mathematics
           </div>
         </div>
       </div>
+    </div>
 
-      <div>
-        <h3>Experience</h3>
+    <div class="section">
+      <h3 class="section-header">Experience</h3>
+
+      <div class="section-block mt-0">
         <div class="experience">
-          <div class="company">
-            Coinbase
-          </div>
+          <div class="company">Coinbase</div>
+          <div class="location">Remote</div>
+          <div class="dates">Mar. 2021 – present</div>
+        </div>
+        <div class="title">
+          <div class="name">Senior Software Engineer</div>
+        </div>
+        <ul class="extra"></ul>
+      </div>
 
-          <div class="city">
-            Remote
-          </div>
-
-          <div class="span">
-            Mar. 2021 – present
-          </div>
-
-          <div class="title">
-            Senior Software Engineer
-          </div>
-
-          <ul class="extra"></ul>
+      <div class="section-block">
+        <div class="experience">
+          <div class="company">Red Ventures</div>
+          <div class="location">Fort Mill, SC</div>
+          <div class="dates">Sept. 2017 – Feb. 2021</div>
         </div>
 
-        <div class="experience">
-          <div class="company">
-            Red Ventures
-          </div>
-
-          <div class="city">
-            Fort Mill, SC
-          </div>
-
-          <div class="span hide-mobile">
-            Sept. 2017 – Feb. 2021
-          </div>
-
-          <div class="title">
-            Principal Software Engineer
-          </div>
-
-          <div class="title-date">
-            Feb. 2020 – Feb. 2021
-          </div>
-
-          <div class="title">
-            Senior Software Engineer
-          </div>
-
-          <div class="title-date">
-            Sept. 2017 – Feb. 2020
-          </div>
-
-          <ul class="extra">
-            <li>Designed and implemented an API in Go for an internal system for doctors to update their credentials</li>
-            <li>Prototyped a command-line tool in Go to synchronize logic changes between CDN environments</li>
-            <li>Led the development of and architected large portions of a search and scheduling API for a major health provider network, as part of the company's leap into healthcare</li>
-            <li>Helped to migrate a legacy AWS environment with about two dozen applications and services into a new one built entirely via Terraform</li>
-            <li>Architected a modern backend for a travel product we acquired, helping to migrate from a Java-based monolith to a more modular, cloud-native approach</li>
-            <li>Led the development of a CI/CD pipeline and provisioned infrastructure for the new travel backend using Terraform</li>
-            <li>Helped to architect and led the development of an API to provide search and scheduling for healthcare providers at a national scale</li>
-            <li>Helped to develop and formalize our version control strategy, and implemented documentation and contracts that let us collaborate asynchronously with the frontend engineering team</li>
-            <li>Served as a mentor to many other engineers: reviewed code, assisted in debugging and gave advice on how to move forward in their careers</li>
-          </ul>
+        <div class="title">
+          <div class="name">Principal Software Engineer</div>
+          <div class="dates">Feb. 2020 – Feb. 2021</div>
         </div>
 
+        <div class="title">
+          <div class="name">Senior Software Engineer</div>
+          <div class="dates">Sept. 2017 – Feb. 2020</div>
+        </div>
+
+        <ul class="mt-2 dashed-list">
+          <li>Designed and implemented an API in Go for an internal system for doctors to update their credentials</li>
+          <li>Prototyped a command-line tool in Go to synchronize logic changes between CDN environments</li>
+          <li>Led the development of and architected large portions of a search and scheduling API for a major health provider network, as part of the company's leap into healthcare</li>
+          <li>Helped to migrate a legacy AWS environment with about two dozen applications and services into a new one built entirely via Terraform</li>
+          <li>Architected a modern backend for a travel product we acquired, helping to migrate from a Java-based monolith to a more modular, cloud-native approach</li>
+          <li>Led the development of a CI/CD pipeline and provisioned infrastructure for the new travel backend using Terraform</li>
+          <li>Helped to architect and led the development of an API to provide search and scheduling for healthcare providers at a national scale</li>
+          <li>Helped to develop and formalize our version control strategy, and implemented documentation and contracts that let us collaborate asynchronously with the frontend engineering team</li>
+          <li>Served as a mentor to many other engineers: reviewed code, assisted in debugging and gave advice on how to move forward in their careers</li>
+        </ul>
+      </div>
+
+      <div class="section-block">
         <div class="experience">
-          <div class="company">
-            LoudDoor LLC (Storylift LLC)
-          </div>
+          <div class="company">LoudDoor LLC (Storylift LLC)</div>
+          <div class="location">Columbia, SC</div>
+          <div class="dates">June 2009 – Sept. 2017</div>
+        </div>
 
-          <div class="city">
-            Columbia, SC
-          </div>
-
-          <div class="span hide-mobile">
-            June 2009 – Sept. 2017
-          </div>
+        <div class="title">
+          <div class="name">Senior Software Engineer</div>
+          <div class="dates">Jan. 2015 – Sept. 2017</div>
+        </div>
 
           <div class="title">
-            Senior Software Engineer
+            <div class="name">Software Engineer</div>
+            <div class="dates">June 2009 – Jan. 2015</div>
           </div>
 
-          <div class="title-date">
-            Jan. 2015 – Sept. 2017
-          </div>
-
-          <div class="title">
-            Software Engineer
-          </div>
-
-          <div class="title-date">
-            June 2009 – Jan. 2015
-          </div>
-
-          <ul class="extra">
+          <ul class="mt-2 dashed-list">
             <li>Developed highly-scalable web applications using a LAMP stack deployed on Amazon EC2</li>
             <li>Spearheaded the development of a business pivot to Facebook Page audience analytics</li>
             <li>Prototyped most of the analytics algorithms and systems used in the company</li>
@@ -159,140 +116,104 @@
             <li>Designed and implemented a sales lead platform with the ability to forward leads to multiple client platforms</li>
             <li>Implemented a "management report" which contains critical metrics and is generated daily and e-mailed to decision-makers at the company</li>
           </ul>
-        </div>
-
-        <div class="experience">
-          <div class="company">
-            Lazorpoint, LLC
-          </div>
-
-          <div class="city">
-            Cleveland, OH
-          </div>
-
-          <div class="span">
-            June 2007 – May 2009
-          </div>
-
-          <div class="title full">
-            Application Developer - Intern
-          </div>
-
-          <div class="title full">
-            Client Services Engineer - Intern
-          </div>
-
-          <ul class="extra">
-            <li>Created custom, data-driven applications for various clients</li>
-            <li>Gained experience in .NET development, report development and handheld development</li>
-            <li>Worked with other developers to standardize practices including application deployment techniques, version control management, and product testing standards</li>
-          </ul>
-        </div>
-
-        <div class="experience">
-          <div class="company">
-            City of Mentor
-          </div>
-
-          <div class="city">
-            Mentor, OH
-          </div>
-
-          <div class="span">
-            May 2006 – July 2006
-          </div>
-
-          <div class="title">
-            Engineering Intern
-          </div>
-
-          <ul class="extra hidden">
-            <li>Assisted in the civil engineering department with day-to-day tasks</li>
-          </ul>
-        </div>
-
-        <div class="experience">
-          <div class="company">
-            Perry Local Schools
-          </div>
-
-          <div class="city">
-            Perry, OH
-          </div>
-
-          <div class="span">
-            Nov. 2003 – Aug. 2005
-          </div>
-
-          <div class="title">
-            Web Programmer/Designer
-          </div>
-
-          <ul class="extra hidden">
-            <li>Content management and addition for faculty and staff on the main district website</li>
-            <li>Worked with other students on several larger projects, including a high school course registrar and a course database complete with objectives</li>
-          </ul>
-        </div>
       </div>
 
-      <div class="same-page">
-        <h3>Skills</h3>
-        <ul class="normal-list">
-          <li><b>Programming languages:</b> Extensive experience with Go, PHP (standard and MVC paradigms, Laravel framework), Javascript (ES6, Vue, jQuery, some React); some experience with C#, shell scripting</li>
-          <li><b>Infrastructure:</b> Extensive experience with Amazon AWS (EC2, ECS, S3, Lambda, some API Gateway, some Cloudfront, some Kinesis), Terraform</li>
-          <li><b>Databases:</b> Extensive experience with MySQL and SQL Server development/optimization, Redis; some experience with MongoDB, DynamoDB, MySQL administration</li>
-          <li><b>Other technology:</b> Extensive experience with Git; experience with Kubernetes, Cloudflare, Subversion, Mercurial, and CVS version control, Memcache, Redis</li>
+      <div class="section-block">
+        <div class="experience">
+          <div class="company">Lazorpoint, LLC</div>
+          <div class="location">Cleveland, OH</div>
+          <div class="dates">June 2007 – May 2009</div>
+        </div>
+
+        <div class="title">
+          <div class="name">Application Developer - Intern</div>
+        </div>
+
+        <div class="title">
+          <div class="name">Client Services Engineer - Intern</div>
+        </div>
+
+        <ul class="mt-2 dashed-list">
+          <li>Created custom, data-driven applications for various clients</li>
+          <li>Gained experience in .NET development, report development and handheld development</li>
+          <li>Worked with other developers to standardize practices including application deployment techniques, version control management, and product testing standards</li>
         </ul>
       </div>
 
-      <div class="same-page">
-        <h3>Miscellaneous</h3>
-        <ul class="normal-list">
-          <li>Created a small free-to-use blog website that operated for almost four years. Users were allowed to upload photos, write journal entries, etc. Source available upon request.</li>
-          <li>Created <a href="https://section411.com">Section 411</a>, a blog on the <a href="http://gohugo.io">Hugo</a> platform with a theme designed from scratch.</li>
-          <li>Published <a href="https://section411.com/2019/07/hello-world/">several</a> <a href="https://section411.com/2019/03/louvre-version-1.1/">technical</a> <a href="https://section411.com/2018/07/of-commits-and-containers/">posts</a></li>
-          <li>Created <a href="https://louvre.io">Louvre</a>, an image manager that can resize and serve images on the fly</li>
-        </ul>
+      <div class="section-block">
+        <div class="experience">
+          <div class="company">City of Mentor</div>
+          <div class="location">Mentor, OH</div>
+          <div class="dates">May 2006 – July 2006</div>
+        </div>
 
-        <ul class="normal-list">
-          <li>
-            <b>Stack Overflow:</b>
-            <a href="http://stackoverflow.com/users/350278/jimmy-sawczuk">Jimmy Sawczuk</a>
-          </li>
-          <li>
-            <b>GitHub</b>:
-            <a href="http://github.com/jimmysawczuk">github.com/jimmysawczuk</a>
-          </li>
+        <div class="title">
+          <div class="name">Engineering Intern</div>
+        </div>
+
+        <ul class="mt-2 dashed-list">
+          <li>Assisted in the civil engineering department with day-to-day tasks</li>
+        </ul>
+      </div>
+
+      <div class="section-block">
+        <div class="experience">
+          <div class="company">Perry Local Schools</div>
+          <div class="location">Perry, OH</div>
+          <div class="dates">Nov. 2003 – Aug. 2005</div>
+        </div>
+
+        <div class="title">
+          <div class="name">Web Programmer/Designer</div>
+        </div>
+
+        <ul class="mt-2 dashed-list">
+          <li>Content management and addition for faculty and staff on the main district website</li>
+          <li>Worked with other students on several larger projects, including a high school course registrar and a course database complete with objectives</li>
         </ul>
       </div>
     </div>
+
+    <div class="section same-page">
+      <h3 class="section-header">Skills</h3>
+      <ul class="mt-2 dashed-list">
+        <li><strong>Programming languages:</strong> Extensive experience with Go, PHP (standard and MVC paradigms, Laravel framework), Javascript (ES6, Vue, jQuery, some React); some experience with C#, shell scripting</li>
+        <li><strong>Infrastructure:</strong> Extensive experience with Amazon AWS (EC2, ECS, S3, Lambda, some API Gateway, some Cloudfront, some Kinesis), Terraform; some experience with Kubernetes, Google Cloud</li>
+        <li><strong>Databases:</strong> Extensive experience with MySQL and SQL Server development/optimization, Redis; some experience with MongoDB, DynamoDB, MySQL administration</li>
+        <li><strong>Other technology:</strong> Extensive experience with Git; experience with Kubernetes, Cloudflare, Subversion, Mercurial, and CVS version control, Memcache, Redis</li>
+      </ul>
+    </div>
+
+    <div class="section same-page">
+      <h3 class="section-header">Miscellaneous</h3>
+      <ul class="mt-2 dashed-list">
+        <li>Created a small free-to-use blog website that operated for almost four years. Users were allowed to upload photos, write journal entries, etc.</li>
+        <li>Created <a href="https://section411.com" class="link-std text-blue-600">Section 411</a>, a blog on the <a href="http://gohugo.io" class="link-std text-blue-600">Hugo</a> platform with a theme designed from scratch</li>
+        <li>Published <a href="https://section411.com/2019/07/hello-world/" class="link-std text-blue-600">several</a> <a href="https://section411.com/2019/03/louvre-version-1.1/" class="link-std text-blue-600">technical</a> <a href="https://section411.com/2018/07/of-commits-and-containers/" class="link-std text-blue-600">posts</a></li>
+        <li>Created <a href="https://louvre.io" class="link-std text-blue-600">Louvre</a>, an image manager that can resize and serve images on the fly</li>
+      </ul>
+
+      <ul class="mt-2 dashed-list">
+        <li><strong>Stack Overflow:</strong>
+          <a href="https://stackoverflow.com/users/350278/jimmy-sawczuk" class="link-std text-blue-600">Jimmy Sawczuk</a>
+        </li>
+        <li><strong>GitHub:</strong>
+          <a href="https://github.com/jimmysawczuk" class="link-std text-blue-600">github.com/jimmysawczuk</a>
+        </li>
+      </ul>
+    </div>
   </div>
 
-  <div id="footer">
+  <div class="my-4 text-sm text-center text-gray-500 dark:text-gray-400 transition-colors">
     {{ $rev := getJSON "REVISION.json" }}
-    <span class="line">&copy; {{ now | formatTime "2006" }} Jimmy Sawczuk</span>
-    <span class="dot">&middot;</span>
-    <span class="line revision">
-      <a href="https://github.com/jimmysawczuk/jimmysawczuk.com/commit/{{ index $rev "hex" "full" }}">
+    <div class="inline-block after:inline-block after:mx-2 after:content-['·']">&copy; {{ now | formatTime "2006" }} Jimmy Sawczuk</div>
+    <div class="inline-block after:inline-block after:mx-2 after:content-['·']">
+      <a href="https://github.com/jimmysawczuk/jimmysawczuk.com/commit/{{ index $rev "hex" "full" }}" class="link-inv">
         {{- printf "rev. %s" (index $rev "hex" "short") -}}
       </a>
-    </span>
-    <span class="dot">&middot;</span>
-    <span class="line" id="revision-date">Last modified on {{ index $rev "date" | parseTime | formatTime "January 2, 2006" }}</span>
-  </div>
-
-  <div id="print-footer">
-    <div class="container">
-      &copy; {{ now | formatTime "2006" }} Jimmy Sawczuk
-      &middot;
-      <span class="revision">
-        <a href="https://github.com/jimmysawczuk/jimmysawczuk.com/commit/{{ index $rev "hex" "full" }}">
-          {{- printf "rev. %s" (index $rev "hex" "short") -}}
-        </a>
-      </span>
-      &middot;
-      Printed on <span id="print-date"></span>
     </div>
+    <div class="inline-block print:hidden">Last modified on {{ index $rev "date" | parseTime | formatTime "January 2, 2006" }}</div>
+    <div class="hidden print:inline-block">Printed on <span id="print-date"></span></div>
   </div>
 </body>
 </html>

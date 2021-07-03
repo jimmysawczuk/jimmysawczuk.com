@@ -1,6 +1,6 @@
 module.exports = {
   mode: "jit",
-  purge: ["./public/*.html"],
+  purge: ["./public/**/*.html"],
   darkMode: "media",
   theme: {
     fontFamily: {
@@ -29,7 +29,11 @@ module.exports = {
         "sans-serif",
       ],
     },
-    extend: {},
+    extend: {
+      screens: {
+        print: { raw: "print" },
+      },
+    },
   },
   variants: {
     extend: {},

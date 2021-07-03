@@ -4,7 +4,26 @@
 
 @layer base {
   html {
-    font-size: 17px;
+    font-size: 15px;
+  }
+
+  @media (min-width: 640px) {
+    font-size: 16px;
+  }
+
+  @media print {
+    html {
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    @page {
+      margin: 0.5in;
+    }
+
+    @page :first {
+      margin-top: 0.25in;
+    }
   }
 
   @font-face {
@@ -124,12 +143,75 @@
     @apply svg-inline--fa;
     height: 1.25em;
     vertical-align: -0.25em;
-    /* vertical-align: -0.33333em; */
   }
 }
 
 @layer base {
+  .section {
+    @apply mt-4 px-4 sm:mt-8 print:mt-4;
+  }
+
+  .section-block {
+    @apply py-2 mt-2 print:py-2 print:mt-2 sm:py-4;
+  }
+
+  .section-header {
+    @apply text-3xl md:text-4xl print:text-3xl font-title font-bold uppercase leading-relaxed text-blue-500 border-b border-gray-300;
+  }
+
+  .list-dash {
+    list-style-type: "–";
+  }
+
+  .dashed-list {
+    @apply list-dash pl-4;
+  }
+
+  .dashed-list li {
+    @apply pl-4;
+  }
+
   .text-shadow-lg {
     text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.75);
+  }
+
+  .experience {
+    @apply md:grid md:grid-cols-[2fr,1fr,1fr] print:grid print:grid-cols-[2fr,1fr,1fr];
+  }
+
+  .experience .company {
+    @apply text-lg font-bold;
+  }
+
+  .experience .location {
+    @apply text-lg md:text-center;
+  }
+
+  .experience .dates {
+    @apply text-lg md:text-right;
+  }
+
+  .title {
+    @apply md:grid md:grid-cols-[3fr,1fr] my-2 md:my-0 print:grid print:grid-cols-[3fr,1fr] print:my-0;
+  }
+
+  .title .name {
+    @apply italic;
+  }
+
+  .title .dates {
+    @apply md:text-right;
+  }
+
+  .link-std {
+    @apply underline hover:no-underline;
+  }
+
+  .link-inv {
+    @apply hover:underline;
+  }
+
+  .same-page {
+    page-break-inside: avoid;
   }
 }
