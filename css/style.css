@@ -214,4 +214,8 @@
   .same-page {
     page-break-inside: avoid;
   }
+
+  .brand-gradient {
+    @apply bg-gradient-to-t from-green-400 to-blue-500 dark:from-green-300 dark:to-blue-500;
+  }
 }
