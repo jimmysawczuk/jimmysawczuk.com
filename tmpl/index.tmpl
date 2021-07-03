@@ -26,50 +26,63 @@
         </div>
 
         <div class="text-center">
-          <h1 class="font-title text-5xl md:text-6xl font-bold uppercase leading-normal text-transparent bg-clip-text bg-gradient-to-t from-green-400 to-blue-500 dark:from-green-300 dark:to-blue-500 dark:text-shadow-lg transition-all my-2">Jimmy Sawczuk</h1>
+          <h1 class="font-title text-5xl md:text-6xl font-bold uppercase leading-normal text-transparent bg-clip-text bg-gradient-to-t from-green-400 to-blue-500 dark:from-green-300 dark:to-blue-500 dark:text-shadow-lg transition-all my-2 select-none">Jimmy Sawczuk</h1>
           <h2 class="text-2xl font-light text-gray-400 dark:text-gray-500 transition-colors">
-            <span class="block md:inline-block md:after:inline-block md:after:mx-2 md:after:content-['·']">Software Engineer</span><span class="block md:inline-block">Rock Hill, SC</span>
+            <div class="block md:inline-block md:after:inline-block md:after:mx-2 md:after:content-['·']">Software Engineer</div>
+            <div class="block md:inline-block">Rock Hill, SC</div>
           </h2>
 
           <div class="mt-8 grid grid-flow-row gap-4 text-left">
-            <a href="mailto:hello@jimmysawczuk.com" class="block md:mx-8 p-4 bg-gray-800 hover:bg-blue-700 transition-colors text-gray-50 rounded-md" target="_blank">
+            <a href="mailto:hello@jimmysawczuk.com" class="block md:mx-8 p-4 bg-gray-800 dark:bg-gray-700 hover:bg-blue-700 transition-colors text-gray-50 rounded-md text-lg" target="_blank">
               <div class="inline-block mr-2 w-6 text-center">{{ svg "./svg/fa/duotone/paper-plane.svg" }}</div>
               E-mail
             </a>
-            <a href="https://section411.com" class="block md:mx-8 p-4 bg-gray-800 hover:bg-blue-700 transition-colors text-gray-50 rounded-md" target="_blank" rel="noopener">
+            <a href="https://section411.com" class="block md:mx-8 p-4 bg-gray-800 dark:bg-gray-700 hover:bg-blue-700 transition-colors text-gray-50 rounded-md text-lg" target="_blank" rel="noopener">
               <div class="inline-block mr-2 w-6 text-center">{{ svg "./svg/section411.svg" }}</div>
               Section 411
             </a>
-            <a href="/resume" class="block md:mx-8 p-4 bg-gray-800 hover:bg-blue-700 transition-colors text-gray-50 rounded-md">
+            <a href="/resume" class="block md:mx-8 p-4 bg-gray-800 dark:bg-gray-700 hover:bg-blue-700 transition-colors text-gray-50 rounded-md text-lg">
               <div class="inline-block mr-2 w-6 text-center">{{ svg "./svg/fa/duotone/address-card.svg" }}</div>
               Résumé
             </a>
           </div>
         </div>
       </div>
-      <div class="md:grid md:grid-flow-col font-light text-center">
-        <a href="https://facebook.com/jimmysawczuk" class="block py-2 border border-transparent hover:border-b-[#1877f2] hover:text-[#1877f2] transition-colors" target="_blank" rel="noopener">
-          <div class="inline-block mr-2">{{ svg "./svg/fa/brands/facebook-f.svg" }}</div>
+      <div class="md:grid md:grid-flow-col font-light">
+        <a href="https://facebook.com/jimmysawczuk" class="block px-8 py-2 border border-transparent hover:border-b-[#1877f2] hover:text-[#1877f2] transition-colors" target="_blank" rel="noopener">
+          <div class="inline-block w-6 mr-2 text-center">
+            {{- svg "./svg/fa/brands/facebook-f.svg" -}}
+          </div>
           Facebook
         </a>
-        <a href="https://twitter.com/jimmysawczuk" class="block py-2 border border-transparent hover:border-b-[#1da1f2] hover:text-[#1da1f2] transition-colors" target="_blank" rel="noopener">
-          <div class="inline-block mr-2">{{ svg "./svg/fa/brands/twitter.svg" }}</div>
+        <a href="https://twitter.com/jimmysawczuk" class="block px-8 py-2 border border-transparent hover:border-b-[#1da1f2] hover:text-[#1da1f2] transition-colors" target="_blank" rel="noopener">
+          <div class="inline-block w-6 mr-2 text-center">
+            {{- svg "./svg/fa/brands/twitter.svg" -}}
+          </div>
           Twitter
         </a>
-        <a href="https://t.me/jimmysawczuk" class="block py-2 border border-transparent hover:border-b-[#0088cc] hover:text-[#0088cc] transition-colors" target="_blank" rel="noopener">
-          <div class="inline-block mr-2">{{ svg "./svg/fa/brands/telegram-plane.svg" }}</div>
+        <a href="https://t.me/jimmysawczuk" class="block px-8 py-2 border border-transparent hover:border-b-[#0088cc] hover:text-[#0088cc] transition-colors" target="_blank" rel="noopener">
+          <div class="inline-block w-6 mr-2 text-center">
+            {{- svg "./svg/fa/brands/telegram-plane.svg" -}}
+          </div>
           Telegram
         </a>
-        <a href="https://instagram.com/jimmysawczuk" class="block py-2 border border-transparent hover:border-b-[#e1306c] hover:text-[#e1306c] transition-colors" target="_blank" rel="noopener">
-          <div class="inline-block mr-2">{{ svg "./svg/fa/brands/instagram.svg" }}</div>
+        <a href="https://instagram.com/jimmysawczuk" class="block px-8 py-2 border border-transparent hover:border-b-[#e1306c] hover:text-[#e1306c] transition-colors" target="_blank" rel="noopener">
+          <div class="inline-block w-6 mr-2 text-center">
+            {{- svg "./svg/fa/brands/instagram.svg" -}}
+          </div>
           Instagram
         </a>
-        <a href="https://linkedin.com/in/jimmysawczuk" class="block py-2 border border-transparent hover:border-b-[#0077b5] hover:text-[#0077b5] transition-colors" target="_blank" rel="noopener">
-          <div class="inline-block mr-2">{{ svg "./svg/fa/brands/linkedin-in.svg" }}</div>
+        <a href="https://linkedin.com/in/jimmysawczuk" class="block px-8 py-2 border border-transparent hover:border-b-[#0077b5] hover:text-[#0077b5] transition-colors" target="_blank" rel="noopener">
+          <div class="inline-block w-6 mr-2 text-center">
+            {{- svg "./svg/fa/brands/linkedin-in.svg" -}}
+          </div>
           LinkedIn
         </a>
-        <a href="https://github.com/jimmysawczuk" class="block py-2 border border-transparent hover:border-b-[#333] hover:text-[#333] transition-colors" target="_blank" rel="noopener">
-          <div class="inline-block mr-2">{{ svg "./svg/fa/brands/github.svg" }}</div>
+        <a href="https://github.com/jimmysawczuk" class="block px-8 py-2 border border-transparent hover:border-b-[#333] hover:text-[#333] transition-colors" target="_blank" rel="noopener">
+          <div class="inline-block w-6 mr-2 text-center">
+            {{- svg "./svg/fa/brands/github.svg" -}}
+          </div>
           Github
         </a>
       </div>
