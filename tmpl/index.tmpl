@@ -16,8 +16,8 @@
 <body class="bg-gray-50 dark:bg-gray-900 transition-colors text-gray-800 dark:text-gray-300 relative">
   <div class="min-h-screen md:grid md:place-content-center">
     <div class="md:grid md:grid-flow-row pb-12 md:pb-0 md:max-w-6xl">
-      <div class="p-4 mb-12 md:mb-0 md:grid md:grid-flow-col-dense md:p-12 md:gap-12">
-        <div class="md:max-h-80 md:place-self-center content-center">
+      <div class="p-4 mb-12 md:mb-0 md:grid md:grid-flow-col-dense md:p-12 md:gap-8">
+        <div class="md:max-h-80 md:place-self-center content-center min-w-[150px]">
           <picture>
             <source srcset="{{ asset "/img/headshot.webp" }}" type="image/webp" />
             <source srcset="{{ asset "/img/headshot-rounded.jpg" }}" type="image/jpeg" />
@@ -26,8 +26,8 @@
         </div>
 
         <div class="text-center">
-          <h1 class="font-title text-5xl md:text-6xl font-bold uppercase leading-tight brand-gradient text-transparent bg-clip-text dark:text-shadow-lg transition-all my-2 select-none">Jimmy Sawczuk</h1>
-          <h2 class="text-2xl font-light text-gray-400 dark:text-gray-500 transition-colors">
+          <h1 class="font-title text-5xl md:text-6xl font-bold uppercase leading-tight brand-gradient text-transparent bg-clip-text dark:text-shadow-lg transition-all my-4 md:my-2 select-none">Jimmy Sawczuk</h1>
+          <h2 class="text-2xl font-light text-gray-400 dark:text-gray-500 transition-colors leading-tight">
             <div class="block md:inline-block md:after:inline-block md:after:mx-2 md:after:content-['·']">Software Engineer</div>
             <div class="block md:inline-block">Rock Hill, SC</div>
           </h2>
@@ -48,39 +48,39 @@
           </div>
         </div>
       </div>
-      <div class="md:grid md:grid-flow-col font-light">
-        <a href="https://facebook.com/jimmysawczuk" class="block px-8 py-2 border border-transparent hover:border-b-[#1877f2] hover:text-[#1877f2] transition-colors" target="_blank" rel="noopener">
-          <div class="inline-block w-6 mr-2 text-center">
+      <div class="sm:grid sm:grid-flow-col sm:grid-rows-2 lg:grid-rows-1 font-light">
+        <a href="https://facebook.com/jimmysawczuk" class="block px-8 py-4 border border-transparent hover:border-b-[#1877f2] hover:text-[#1877f2] transition-colors whitespace-nowrap sm:text-center" target="_blank" rel="noopener">
+          <div class="inline-block w-6 mr-2">
             {{- svg "./svg/fa/brands/facebook-f.svg" -}}
           </div>
           Facebook
         </a>
-        <a href="https://twitter.com/jimmysawczuk" class="block px-8 py-2 border border-transparent hover:border-b-[#1da1f2] hover:text-[#1da1f2] transition-colors" target="_blank" rel="noopener">
-          <div class="inline-block w-6 mr-2 text-center">
+        <a href="https://twitter.com/jimmysawczuk" class="block px-8 py-4 border border-transparent hover:border-b-[#1da1f2] hover:text-[#1da1f2] transition-colors whitespace-nowrap sm:text-center" target="_blank" rel="noopener">
+          <div class="inline-block w-6 mr-2">
             {{- svg "./svg/fa/brands/twitter.svg" -}}
           </div>
           Twitter
         </a>
-        <a href="https://t.me/jimmysawczuk" class="block px-8 py-2 border border-transparent hover:border-b-[#0088cc] hover:text-[#0088cc] transition-colors" target="_blank" rel="noopener">
-          <div class="inline-block w-6 mr-2 text-center">
+        <a href="https://t.me/jimmysawczuk" class="block px-8 py-4 border border-transparent hover:border-b-[#0088cc] hover:text-[#0088cc] transition-colors whitespace-nowrap sm:text-center" target="_blank" rel="noopener">
+          <div class="inline-block w-6 mr-2">
             {{- svg "./svg/fa/brands/telegram-plane.svg" -}}
           </div>
           Telegram
         </a>
-        <a href="https://instagram.com/jimmysawczuk" class="block px-8 py-2 border border-transparent hover:border-b-[#e1306c] hover:text-[#e1306c] transition-colors" target="_blank" rel="noopener">
-          <div class="inline-block w-6 mr-2 text-center">
+        <a href="https://instagram.com/jimmysawczuk" class="block px-8 py-4 border border-transparent hover:border-b-[#e1306c] hover:text-[#e1306c] transition-colors whitespace-nowrap sm:text-center" target="_blank" rel="noopener">
+          <div class="inline-block w-6 mr-2">
             {{- svg "./svg/fa/brands/instagram.svg" -}}
           </div>
           Instagram
         </a>
-        <a href="https://linkedin.com/in/jimmysawczuk" class="block px-8 py-2 border border-transparent hover:border-b-[#0077b5] hover:text-[#0077b5] transition-colors" target="_blank" rel="noopener">
-          <div class="inline-block w-6 mr-2 text-center">
+        <a href="https://linkedin.com/in/jimmysawczuk" class="block px-8 py-4 border border-transparent hover:border-b-[#0077b5] hover:text-[#0077b5] transition-colors whitespace-nowrap sm:text-center" target="_blank" rel="noopener">
+          <div class="inline-block w-6 mr-2">
             {{- svg "./svg/fa/brands/linkedin-in.svg" -}}
           </div>
           LinkedIn
         </a>
-        <a href="https://github.com/jimmysawczuk" class="block px-8 py-2 border border-transparent hover:border-b-[#333] hover:text-[#333] transition-colors" target="_blank" rel="noopener">
-          <div class="inline-block w-6 mr-2 text-center">
+        <a href="https://github.com/jimmysawczuk" class="block px-8 py-4 border border-transparent hover:border-b-[#333] hover:text-[#333] dark:hover:text-gray-50 dark:hover:border-b-gray-50 transition-colors whitespace-nowrap sm:text-center" target="_blank" rel="noopener">
+          <div class="inline-block w-6 mr-2">
             {{- svg "./svg/fa/brands/github.svg" -}}
           </div>
           Github

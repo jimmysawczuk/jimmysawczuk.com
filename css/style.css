@@ -216,6 +216,6 @@
   }
 
   .brand-gradient {
-    @apply bg-gradient-to-t from-green-400 to-blue-500 dark:from-green-300 dark:to-blue-500;
+    @apply bg-gradient-to-tr from-green-400 to-blue-500 dark:from-green-300 dark:to-blue-500;
   }
 }
