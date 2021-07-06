@@ -16,39 +16,39 @@
 <body class="bg-gray-50 dark:bg-gray-900 transition-colors text-gray-800 dark:text-gray-300 relative">
   <div class="min-h-screen md:grid md:place-content-center pb-4">
     <div class="md:grid md:grid-flow-row pb-12 md:pb-0 md:max-w-6xl">
-      <div class="p-4 mb-12 md:mb-0 md:grid md:grid-flow-col-dense md:p-12 md:gap-8">
-        <div class="md:max-h-80 md:place-self-center content-center min-w-[150px]">
+      <div class="p-4 mb-12 md:mb-0 grid grid-flow-row md:grid-flow-col-dense sm:gap-x-8">
+        <div class="place-self-center content-center w-[clamp(250px,40vw,350px)]">
           <picture>
             <source srcset="{{ asset "/img/headshot.webp" }}" type="image/webp" />
             <source srcset="{{ asset "/img/headshot-rounded.jpg" }}" type="image/jpeg" />
-            <img src="{{ asset "/img/headshot-rounded.jpg" }}" alt="Jimmy Sawczuk" class="max-h-80 mx-auto" />
+            <img src="{{ asset "/img/headshot-rounded.jpg" }}" alt="Jimmy Sawczuk" />
           </picture>
         </div>
 
-        <div class="text-center">
+        <div class="text-center p-0">
           <h1 class="font-title text-5xl md:text-6xl font-bold uppercase leading-tight brand-gradient text-transparent bg-clip-text dark:text-shadow-lg transition-all my-4 md:my-2 select-none">Jimmy Sawczuk</h1>
-          <h2 class="text-2xl font-light text-gray-400 dark:text-gray-500 transition-colors leading-tight">
+          <h2 class="text-3xl font-light text-gray-400 dark:text-gray-500 transition-colors leading-tight">
             <div class="block md:inline-block md:after:inline-block md:after:mx-2 md:after:content-['·']">Software Engineer</div>
             <div class="block md:inline-block">Rock Hill, SC</div>
           </h2>
 
           <div class="mt-8 grid grid-flow-row gap-4 text-left">
-            <a href="mailto:hello@jimmysawczuk.com" class="block md:mx-8 p-6 bg-gray-800 dark:bg-gray-700 hover:bg-blue-700 transition-colors text-gray-50 rounded-md text-lg" target="_blank">
+            <a href="mailto:hello@jimmysawczuk.com" class="block p-6 bg-gray-800 dark:bg-gray-700 hover:bg-blue-700 transition-colors text-gray-50 rounded-md text-lg" target="_blank">
               <div class="inline-block mr-2 w-8 text-center">{{ svg "./svg/fa/duotone/paper-plane.svg" }}</div>
               E-mail
             </a>
-            <a href="https://section411.com" class="block md:mx-8 p-6 bg-gray-800 dark:bg-gray-700 hover:bg-blue-700 transition-colors text-gray-50 rounded-md text-lg" target="_blank" rel="noopener">
+            <a href="https://section411.com" class="block p-6 bg-gray-800 dark:bg-gray-700 hover:bg-blue-700 transition-colors text-gray-50 rounded-md text-lg" target="_blank" rel="noopener">
               <div class="inline-block mr-2 w-8 text-center">{{ svg "./svg/section411.svg" }}</div>
               Section 411
             </a>
-            <a href="/resume" class="block md:mx-8 p-6 bg-gray-800 dark:bg-gray-700 hover:bg-blue-700 transition-colors text-gray-50 rounded-md text-lg">
+            <a href="/resume" class="block p-6 bg-gray-800 dark:bg-gray-700 hover:bg-blue-700 transition-colors text-gray-50 rounded-md text-lg">
               <div class="inline-block mr-2 w-8 text-center">{{ svg "./svg/fa/duotone/address-card.svg" }}</div>
               Résumé
             </a>
           </div>
         </div>
       </div>
-      <div class="grid grid-flow-col grid-rows-3 sm:grid-rows-2 lg:grid-rows-1 font-light">
+      <div class="grid grid-rows-[repeat(3,1fr)] grid-cols-[repeat(2,1fr)] lg:grid-rows-[1fr] lg:grid-cols-[repeat(6,1fr)] font-light">
         <a href="https://facebook.com/jimmysawczuk" class="block px-8 py-4 border border-transparent hover:border-b-[#1877f2] hover:text-[#1877f2] transition-colors whitespace-nowrap sm:text-center" target="_blank" rel="noopener">
           <div class="inline-block w-6 mr-2">
             {{- svg "./svg/fa/brands/facebook-f.svg" -}}
