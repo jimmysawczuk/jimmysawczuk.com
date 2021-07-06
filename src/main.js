@@ -1,2 +1,2 @@
-import "../scss/main.scss"
-import "../scss/dark-mode-switch.scss"
+import "../css/style.css"
+// import "../scss/dark-mode-switch.scss"

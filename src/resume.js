@@ -1,5 +1,5 @@
-import "../scss/resume.scss"
-import "../scss/dark-mode-switch.scss"
+// import "../scss/resume.scss"
+// import "../scss/dark-mode-switch.scss"
 
 function setPrintDate(el) {
   var d = new Date()
