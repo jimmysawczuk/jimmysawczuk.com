@@ -14,7 +14,6 @@ mv scm-status-v2.2.0-linux-amd64 $HOME/bin/scm-status
 chmod +x $HOME/bin/scm-status
 
 scm-status -out=REVISION.json
-yarn dark-mode
 tmpl
 yarn build
 cp -R img *.png *.xml *.ico REVISION.json manifest.json site.webmanifest _redirects _headers public/
